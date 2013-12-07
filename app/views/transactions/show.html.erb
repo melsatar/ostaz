@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From Account:</strong>
+  <%#= @transaction.from_account_id %>
+  <% Account.where(:id => @transaction.from_account_id).each do |account| %> 
+   <tr>
+     <td width="10"><%= account.a_name%></td>
+   </tr>
+  <% end %>
+</p>
+
+<p>
+  <strong>To Account:</strong>
+  <%#= @transaction.to_account_id %>
+  <% Account.where(:id => @transaction.to_account_id).each do |account| %> 
+   <tr>
+     <td width="10"><%= account.a_name%></td>
+   </tr>
+  <% end %>
+</p>
+
+<p>
+  <strong>Transaction Amount:</strong>
+  <%= @transaction.t_amount %>
+</p>
+
+<p>
+  <strong>Transaction date:</strong>
+  <%= @transaction.t_date %>
+</p>
+
+<p>
+  <strong>Transaction desciption:</strong>
+  <%= @transaction.t_desc %>
+</p>
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>
