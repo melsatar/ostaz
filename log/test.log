@@ -767,3 +767,20 @@ Processing by TransactionsController#new as HTML
   Rendered transactions/new.html.erb within layouts/application (89.4ms)
 Completed 200 OK in 137ms (Views: 90.4ms | ActiveRecord: 0.9ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-14 23:55:00 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 87ms (Views: 70.0ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-14 23:55:00 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (80.9ms)
+  Rendered transactions/new.html.erb within layouts/application (110.6ms)
+Completed 200 OK in 154ms (Views: 111.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
