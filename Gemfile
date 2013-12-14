@@ -8,6 +8,19 @@ gem 'rails', '4.0.1'
 group :development, :test do
   gem 'sqlite3'
   gem 'ruby-debug19'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'cucumber-rails'
+  gem 'cucumber-rails-training-wheels'
+  gem 'webrat'
+  gem 'mechanize'
+  gem 'rspec'
+  gem 'factory_girl'
 end
 
 group :production do

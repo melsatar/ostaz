@@ -9,6 +9,7 @@ class Transaction < ActiveRecord::Base
 
       #before_create :check_amount_exist(account)
       before_create :check_amount_exist
+      before_update :check_amount_exist
       #validates :check_amount_exist
 
       def check_amount_exist

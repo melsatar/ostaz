@@ -16,7 +16,7 @@ class Transaction < ActiveRecord::Base
              true
           else
 	     
-	     errors[:base] << Account.find_by_id(self.from_account_id).a_name + " Account does not have enough balance it only have = " + Account.find_by_id(self.from_account_id).a_amount
+	     errors[:base] << Account.find_by_id(self.from_account_id).a_name + " Account does not have enough balance it only have = " + Account.find_by_id(self.from_account_id).a_amount.to_s
  	     false 
              #return "The account does not have enough amount"
           end
