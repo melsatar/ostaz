@@ -9,6 +9,7 @@ class Transaction < ActiveRecord::Base
 
       #before_create :check_amount_exist(account)
       before_create :check_amount_exist
+      before_save :validate_all_accounts
       before_update :check_amount_exist
       #validates :check_amount_exist
 
@@ -18,6 +19,39 @@ class Transaction < ActiveRecord::Base
           else
 	     
 	     errors[:base] << Account.find_by_id(self.from_account_id).a_name + " Account does not have enough balance it only have = " + Account.find_by_id(self.from_account_id).a_amount.to_s
+ 	     false 
+             #return "The account does not have enough amount"
+          end
+      end
+
+def validate_all_accounts
+          @asset_amount = 0
+          Account.select(:a_amount).where("a_type = 'Asset'").each do |asset|
+		@asset_amount = asset.a_amount + @asset_amount
+              
+          end
+	  @liability_amount = 0
+          Account.select(:a_amount).where("a_type = 'Liability'").each do |liability|
+		@liability_amount = liability.a_amount + @liability_amount
+              
+          end
+          @expense_amount = 0
+          Account.select(:a_amount).where("a_type = 'Expense'").each do |expense|
+		@expense_amount = expense.a_amount + @expense_amount
+              
+          end
+          @equity_amount = 0
+          Account.select(:a_amount).where("a_type = 'Equity'").each do |equity|
+		@equity_amount = equity.a_amount + @equity_amount
+              
+          end       
+       
+
+	  if   @asset_amount - @liability_amount + @expense_amount - @equity_amount ==0
+          true
+          else
+	     
+	     errors[:base] << " The Transaction validation fails "
  	     false 
              #return "The account does not have enough amount"
           end

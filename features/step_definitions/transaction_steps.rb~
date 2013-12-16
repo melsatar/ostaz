@@ -1,13 +1,16 @@
 Given(/^From account "(.*?)" exist$/) do |accounts|
-    accounts.split(", ").each do |account|
-    Account.where("a_name = '"+ account +"'")
+    #accounts.split(", ").each do |account|
+    #Account.where("a_name = '"+ account +"'")
+    #accounts = {"Cash"=>"1","Bank"=>"2"}
     # alternatively, using factory_girl 
     # Factory(:composer, :name => composer)
-  end
+   
+  #end
 end
 
 When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
-  select("1", :from => field)
+  transaction_from_account_id = Account.select(:id)
+  select(1, :from => field)
 end
 
 Given(/^To account "(.*?)" exist$/) do |accounts|
