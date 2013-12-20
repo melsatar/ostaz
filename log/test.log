@@ -1398,3 +1398,1129 @@ Processing by TransactionsController#new as HTML
   Rendered transactions/new.html.erb within layouts/application (108.8ms)
 Completed 200 OK in 151ms (Views: 110.0ms | ActiveRecord: 0.7ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 02:58:45 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (2.0ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 372ms (Views: 345.5ms | ActiveRecord: 2.0ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2013-12-20 02:58:46 +0200
+Processing by AccountsController#new as HTML
+  Rendered accounts/_form.html.erb (121.4ms)
+  Rendered accounts/new.html.erb within layouts/application (148.6ms)
+Completed 200 OK in 160ms (Views: 158.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 02:58:46 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 02:58:46 +0200
+Processing by TransactionsController#new as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered transactions/_form.html.erb (55.3ms)
+  Rendered transactions/new.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 113ms (Views: 58.2ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:02:46 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 89ms (Views: 71.4ms | ActiveRecord: 1.6ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2013-12-20 03:02:46 +0200
+Processing by AccountsController#new as HTML
+  Rendered accounts/_form.html.erb (76.3ms)
+  Rendered accounts/new.html.erb within layouts/application (79.5ms)
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:06:57 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.8ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 89ms (Views: 71.3ms | ActiveRecord: 1.8ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2013-12-20 03:06:57 +0200
+Processing by AccountsController#new as HTML
+  Rendered accounts/_form.html.erb (76.3ms)
+  Rendered accounts/new.html.erb within layouts/application (79.4ms)
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:08:08 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 91ms (Views: 72.6ms | ActiveRecord: 1.7ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2013-12-20 03:08:08 +0200
+Processing by AccountsController#new as HTML
+  Rendered accounts/_form.html.erb (77.6ms)
+  Rendered accounts/new.html.erb within layouts/application (80.9ms)
+Completed 200 OK in 83ms (Views: 81.9ms | ActiveRecord: 0.2ms)
+Started POST "/accounts" for 127.0.0.1 at 2013-12-20 03:08:08 +0200
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"a_name"=>"Test Account", "a_type"=>"Asset", "a_amount"=>"1000"}, "commit"=>"Create Account"}
+  [1m[36mSQL (48.2ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 1000.0], ["a_name", "Test Account"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 01:08:08 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 01:08:08 UTC +00:00]]
+Redirected to http://www.example.com/accounts/1
+Completed 302 Found in 51ms (ActiveRecord: 48.2ms)
+Started GET "/accounts/1" for 127.0.0.1 at 2013-12-20 03:08:08 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered accounts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:08:21 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 90ms (Views: 72.3ms | ActiveRecord: 1.7ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2013-12-20 03:08:21 +0200
+Processing by AccountsController#new as HTML
+  Rendered accounts/_form.html.erb (77.0ms)
+  Rendered accounts/new.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 83ms (Views: 81.4ms | ActiveRecord: 0.3ms)
+Started POST "/accounts" for 127.0.0.1 at 2013-12-20 03:08:21 +0200
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"a_name"=>"Test Account", "a_type"=>"Asset", "a_amount"=>"1000"}, "commit"=>"Create Account"}
+  [1m[36mSQL (35.4ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 1000.0], ["a_name", "Test Account"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 01:08:21 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 01:08:21 UTC +00:00]]
+Redirected to http://www.example.com/accounts/1
+Completed 302 Found in 38ms (ActiveRecord: 35.4ms)
+Started GET "/accounts/1" for 127.0.0.1 at 2013-12-20 03:08:21 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered accounts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:08:21 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 03:08:21 +0200
+Processing by TransactionsController#new as HTML
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered transactions/_form.html.erb (43.5ms)
+  Rendered transactions/new.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 86ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:13:48 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 90ms (Views: 72.7ms | ActiveRecord: 1.7ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 03:13:48 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (83.4ms)
+  Rendered transactions/new.html.erb within layouts/application (113.9ms)
+Completed 200 OK in 158ms (Views: 115.0ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:15:25 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 89ms (Views: 71.2ms | ActiveRecord: 1.7ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 03:15:25 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (81.2ms)
+  Rendered transactions/new.html.erb within layouts/application (110.9ms)
+Completed 200 OK in 155ms (Views: 112.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:16:20 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.8ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 89ms (Views: 71.4ms | ActiveRecord: 1.8ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 03:16:20 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (81.5ms)
+  Rendered transactions/new.html.erb within layouts/application (111.3ms)
+Completed 200 OK in 155ms (Views: 112.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:17:35 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 89ms (Views: 71.0ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 03:17:36 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (81.6ms)
+  Rendered transactions/new.html.erb within layouts/application (111.8ms)
+Completed 200 OK in 172ms (Views: 128.1ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:18:48 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 87ms (Views: 69.9ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 03:18:49 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (80.2ms)
+  Rendered transactions/new.html.erb within layouts/application (111.2ms)
+Completed 200 OK in 155ms (Views: 112.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:19:09 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 88ms (Views: 70.6ms | ActiveRecord: 1.7ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 03:19:09 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (81.5ms)
+  Rendered transactions/new.html.erb within layouts/application (111.1ms)
+Completed 200 OK in 154ms (Views: 112.2ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 03:19:37 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 90ms (Views: 72.0ms | ActiveRecord: 1.7ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 03:19:37 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (82.5ms)
+  Rendered transactions/new.html.erb within layouts/application (112.5ms)
+Completed 200 OK in 156ms (Views: 113.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:25:13 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 86ms (Views: 68.9ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:25:13 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.4ms)
+  Rendered transactions/new.html.erb within layouts/application (107.4ms)
+Completed 200 OK in 149ms (Views: 108.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:26:04 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 86ms (Views: 68.8ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:26:04 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.8ms)
+  Rendered transactions/new.html.erb within layouts/application (107.9ms)
+Completed 200 OK in 150ms (Views: 109.1ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:26:38 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 86ms (Views: 69.1ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:26:38 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.5ms)
+  Rendered transactions/new.html.erb within layouts/application (107.6ms)
+Completed 200 OK in 149ms (Views: 108.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:27:03 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 87ms (Views: 69.3ms | ActiveRecord: 1.7ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:27:03 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.3ms)
+  Rendered transactions/new.html.erb within layouts/application (107.3ms)
+Completed 200 OK in 150ms (Views: 108.5ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:27:34 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 86ms (Views: 68.8ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:27:34 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.0ms)
+  Rendered transactions/new.html.erb within layouts/application (108.3ms)
+Completed 200 OK in 150ms (Views: 109.4ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:28:22 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 96ms (Views: 69.3ms | ActiveRecord: 1.7ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:28:22 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.7ms)
+  Rendered transactions/new.html.erb within layouts/application (108.0ms)
+Completed 200 OK in 150ms (Views: 109.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:29:20 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 88ms (Views: 70.4ms | ActiveRecord: 1.7ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:29:20 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (81.1ms)
+  Rendered transactions/new.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 154ms (Views: 112.2ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:30:11 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 86ms (Views: 69.1ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:30:11 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.0ms)
+  Rendered transactions/new.html.erb within layouts/application (108.2ms)
+Completed 200 OK in 151ms (Views: 109.4ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:30:32 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 86ms (Views: 69.2ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:30:32 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.7ms)
+  Rendered transactions/new.html.erb within layouts/application (107.8ms)
+Completed 200 OK in 150ms (Views: 109.0ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:31:00 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 88ms (Views: 70.5ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:31:00 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.9ms)
+  Rendered transactions/new.html.erb within layouts/application (109.4ms)
+Completed 200 OK in 152ms (Views: 110.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:32:05 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 87ms (Views: 69.5ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:32:06 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.5ms)
+  Rendered transactions/new.html.erb within layouts/application (108.8ms)
+Completed 200 OK in 151ms (Views: 110.0ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:33:09 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 86ms (Views: 69.3ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:33:09 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (80.5ms)
+  Rendered transactions/new.html.erb within layouts/application (109.8ms)
+Completed 200 OK in 152ms (Views: 111.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:35:07 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 86ms (Views: 68.9ms | ActiveRecord: 1.7ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:35:08 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.2ms)
+  Rendered transactions/new.html.erb within layouts/application (107.1ms)
+Completed 200 OK in 149ms (Views: 108.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:36:55 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 87ms (Views: 69.7ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:36:56 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.8ms)
+  Rendered transactions/new.html.erb within layouts/application (109.1ms)
+Completed 200 OK in 151ms (Views: 110.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:37:14 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 87ms (Views: 69.2ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:37:15 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.4ms)
+  Rendered transactions/new.html.erb within layouts/application (107.4ms)
+Completed 200 OK in 150ms (Views: 108.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:38:05 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 86ms (Views: 69.3ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:38:05 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.2ms)
+  Rendered transactions/new.html.erb within layouts/application (108.4ms)
+Completed 200 OK in 151ms (Views: 109.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:38:41 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 88ms (Views: 70.2ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:38:41 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.8ms)
+  Rendered transactions/new.html.erb within layouts/application (107.8ms)
+Completed 200 OK in 150ms (Views: 109.0ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:39:35 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 87ms (Views: 69.8ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:39:35 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.6ms)
+  Rendered transactions/new.html.erb within layouts/application (109.3ms)
+Completed 200 OK in 152ms (Views: 110.5ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:44:16 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 86ms (Views: 69.0ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:44:16 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.0ms)
+  Rendered transactions/new.html.erb within layouts/application (108.0ms)
+Completed 200 OK in 150ms (Views: 109.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:45:18 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 87ms (Views: 69.3ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:45:18 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.5ms)
+  Rendered transactions/new.html.erb within layouts/application (107.5ms)
+Completed 200 OK in 149ms (Views: 108.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:51:18 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.7ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 88ms (Views: 69.6ms | ActiveRecord: 1.7ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:51:18 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.6ms)
+  Rendered transactions/new.html.erb within layouts/application (108.7ms)
+Completed 200 OK in 151ms (Views: 110.0ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:51:46 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 87ms (Views: 69.6ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:51:46 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.0ms)
+  Rendered transactions/new.html.erb within layouts/application (108.0ms)
+Completed 200 OK in 150ms (Views: 109.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:52:45 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 86ms (Views: 69.2ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:52:45 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.9ms)
+  Rendered transactions/new.html.erb within layouts/application (108.1ms)
+Completed 200 OK in 150ms (Views: 109.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:58:07 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 86ms (Views: 69.2ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:58:08 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.0ms)
+  Rendered transactions/new.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 151ms (Views: 109.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 16:59:33 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 86ms (Views: 69.1ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 16:59:33 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.7ms)
+  Rendered transactions/new.html.erb within layouts/application (107.9ms)
+Completed 200 OK in 150ms (Views: 109.0ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT id FROM "accounts" WHERE (a_name= 'Bank')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:02:34 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 87ms (Views: 69.5ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:02:34 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.9ms)
+  Rendered transactions/new.html.erb within layouts/application (107.9ms)
+Completed 200 OK in 150ms (Views: 109.1ms | ActiveRecord: 0.8ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT id FROM "accounts" WHERE (a_name= 'Bank')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:04:41 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 86ms (Views: 68.9ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:04:41 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.8ms)
+  Rendered transactions/new.html.erb within layouts/application (107.7ms)
+Completed 200 OK in 150ms (Views: 108.9ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT id FROM "accounts" WHERE (a_name= 'Bank')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:04:57 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 87ms (Views: 69.3ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:04:57 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.0ms)
+  Rendered transactions/new.html.erb within layouts/application (108.3ms)
+Completed 200 OK in 150ms (Views: 109.5ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT id FROM "accounts" WHERE (a_name= 'Bank')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:06:14 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 92ms (Views: 69.0ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:06:14 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.6ms)
+  Rendered transactions/new.html.erb within layouts/application (107.8ms)
+Completed 200 OK in 150ms (Views: 109.0ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT id FROM "accounts" WHERE (a_name= 'Cash')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:07:07 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 87ms (Views: 69.0ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:07:07 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.4ms)
+  Rendered transactions/new.html.erb within layouts/application (107.8ms)
+Completed 200 OK in 150ms (Views: 109.0ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT name FROM "accounts" WHERE (a_name= 'Cash')
+SQLite3::SQLException: no such column: name: SELECT name FROM "accounts"  WHERE (a_name= 'Cash')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:07:42 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 88ms (Views: 70.3ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:07:43 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.0ms)
+  Rendered transactions/new.html.erb within layouts/application (108.4ms)
+Completed 200 OK in 151ms (Views: 109.5ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Cash')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:08:55 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 87ms (Views: 69.6ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:08:55 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (78.6ms)
+  Rendered transactions/new.html.erb within layouts/application (107.6ms)
+Completed 200 OK in 150ms (Views: 108.9ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Cash')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name FROM "accounts" WHERE (a_name= 'Cash')[0m
+Started POST "/transactions" for 127.0.0.1 at 2013-12-20 17:08:55 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"", "to_account_id"=>"", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"20", "t_desc"=>"test"}, "commit"=>"Create Transaction"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 0 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:10:37 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 88ms (Views: 70.6ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:10:37 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (82.4ms)
+  Rendered transactions/new.html.erb within layouts/application (112.1ms)
+Completed 200 OK in 155ms (Views: 114.3ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Cash')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name FROM "accounts" WHERE (a_name= 'Cash')[0m
+Started POST "/transactions" for 127.0.0.1 at 2013-12-20 17:10:38 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"", "to_account_id"=>"", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"20", "t_desc"=>"test"}, "commit"=>"Create Transaction"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 0 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:12:19 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 86ms (Views: 69.2ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:12:19 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.2ms)
+  Rendered transactions/new.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 151ms (Views: 109.7ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Cash')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name FROM "accounts" WHERE (a_name= 'Cash')[0m
+Started POST "/transactions" for 127.0.0.1 at 2013-12-20 17:12:20 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"", "to_account_id"=>"", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"20", "t_desc"=>"test"}, "commit"=>"Create Transaction"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 0 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:14:36 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 86ms (Views: 69.3ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:14:36 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (80.8ms)
+  Rendered transactions/new.html.erb within layouts/application (109.8ms)
+Completed 200 OK in 152ms (Views: 110.9ms | ActiveRecord: 0.7ms)
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["a_amount", 5000.0], ["a_name", "Bank"], ["created_at", Fri, 20 Dec 2013 15:14:36 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:14:36 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["a_amount", 2000.0], ["a_name", "Cash"], ["created_at", Fri, 20 Dec 2013 15:14:36 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:14:36 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Cash')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:15:50 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 86ms (Views: 69.1ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:15:50 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.0ms)
+  Rendered transactions/new.html.erb within layouts/application (108.0ms)
+Completed 200 OK in 150ms (Views: 109.2ms | ActiveRecord: 0.7ms)
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["a_amount", 5000.0], ["a_name", "Bank"], ["created_at", Fri, 20 Dec 2013 15:15:50 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:15:50 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["a_amount", 2000.0], ["a_name", "Cash"], ["created_at", Fri, 20 Dec 2013 15:15:50 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:15:50 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Cash')
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:17:34 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 86ms (Views: 69.1ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:17:35 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.2ms)
+  Rendered transactions/new.html.erb within layouts/application (108.2ms)
+Completed 200 OK in 150ms (Views: 109.4ms | ActiveRecord: 0.7ms)
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["a_amount", 5000.0], ["a_name", "Bank"], ["created_at", Fri, 20 Dec 2013 15:17:35 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:17:35 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["a_amount", 2000.0], ["a_name", "Cash"], ["created_at", Fri, 20 Dec 2013 15:17:35 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:17:35 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Bank')
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:18:01 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 87ms (Views: 69.3ms | ActiveRecord: 1.6ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:18:01 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (79.4ms)
+  Rendered transactions/new.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 150ms (Views: 109.6ms | ActiveRecord: 0.7ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Bank')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name FROM "accounts" WHERE (a_name= 'Cash')[0m
+Started POST "/transactions" for 127.0.0.1 at 2013-12-20 17:18:01 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"", "to_account_id"=>"", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"20", "t_desc"=>"test"}, "commit"=>"Create Transaction"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 0 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:20:24 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 86ms (Views: 69.1ms | ActiveRecord: 1.6ms)
+  [1m[36mSQL (33.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["a_amount", 50000.0], ["a_name", "Bank"], ["created_at", Fri, 20 Dec 2013 15:20:24 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:20:24 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["a_amount", 2000.0], ["a_name", "Cash"], ["created_at", Fri, 20 Dec 2013 15:20:24 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:20:24 UTC +00:00]]
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:20:24 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (77.1ms)
+  Rendered transactions/new.html.erb within layouts/application (80.3ms)
+Completed 200 OK in 118ms (Views: 81.4ms | ActiveRecord: 0.5ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Bank')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name FROM "accounts" WHERE (a_name= 'Cash')[0m
+Started POST "/transactions" for 127.0.0.1 at 2013-12-20 17:20:24 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"20", "t_desc"=>"test"}, "commit"=>"Create Transaction"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1[0m  [["a_amount", 49000.0], ["updated_at", Fri, 20 Dec 2013 15:20:24 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2[0m  [["a_amount", 3000.0], ["updated_at", Fri, 20 Dec 2013 15:20:24 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')
+  [1m[36mAccount Load (0.0ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')[0m
+  [1m[35mAccount Load (0.0ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')
+  [1m[36mAccount Load (0.0ms)[0m  [1mSELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 20 Dec 2013 15:20:24 UTC +00:00], ["from_account_id", 1], ["t_amount", 1000.0], ["t_date", Fri, 20 Dec 2013], ["t_desc", "test"], ["to_account_id", 2], ["updated_at", Fri, 20 Dec 2013 15:20:24 UTC +00:00]]
+Redirected to http://www.example.com/transactions/1
+Completed 302 Found in 11ms (ActiveRecord: 1.4ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2013-12-20 17:20:24 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTransaction Load (0.2ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2
+  Rendered transactions/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:22:31 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 86ms (Views: 68.9ms | ActiveRecord: 1.6ms)
+  [1m[36mSQL (33.3ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 15:22:31 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:22:31 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 2000.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 15:22:31 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:22:31 UTC +00:00]]
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:22:31 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (76.8ms)
+  Rendered transactions/new.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 118ms (Views: 81.1ms | ActiveRecord: 0.5ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Bank')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name FROM "accounts" WHERE (a_name= 'Cash')[0m
+Started POST "/transactions" for 127.0.0.1 at 2013-12-20 17:22:31 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"20", "t_desc"=>"test"}, "commit"=>"Create Transaction"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1[0m  [["a_amount", 49000.0], ["updated_at", Fri, 20 Dec 2013 15:22:31 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2[0m  [["a_amount", 3000.0], ["updated_at", Fri, 20 Dec 2013 15:22:31 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')
+  [1m[36mAccount Load (0.0ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')[0m
+  [1m[35mAccount Load (0.0ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (id = 1)
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (id = 2)[0m
+  Rendered transactions/_form.html.erb (18.9ms)
+  Rendered transactions/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 31ms (Views: 21.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:28:18 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 86ms (Views: 69.3ms | ActiveRecord: 1.6ms)
+  [1m[36mSQL (33.4ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:28:18 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (76.8ms)
+  Rendered transactions/new.html.erb within layouts/application (80.2ms)
+Completed 200 OK in 118ms (Views: 81.3ms | ActiveRecord: 0.5ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Bank')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name FROM "accounts" WHERE (a_name= 'Cash')[0m
+Started POST "/transactions" for 127.0.0.1 at 2013-12-20 17:28:18 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"20", "t_desc"=>"test"}, "commit"=>"Create Transaction"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1[0m  [["a_amount", 49000.0], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2[0m  [["a_amount", 1000.0], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00], ["from_account_id", 1], ["t_amount", 1000.0], ["t_date", Fri, 20 Dec 2013], ["t_desc", "test"], ["to_account_id", 2], ["updated_at", Fri, 20 Dec 2013 15:28:18 UTC +00:00]]
+Redirected to http://www.example.com/transactions/1
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2013-12-20 17:28:18 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTransaction Load (0.1ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2
+  Rendered transactions/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-20 17:29:06 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (1.6ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 86ms (Views: 69.2ms | ActiveRecord: 1.6ms)
+  [1m[36mSQL (33.2ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-20 17:29:06 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 'from_account' LIMIT 1[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (77.3ms)
+  Rendered transactions/new.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 120ms (Views: 81.7ms | ActiveRecord: 0.5ms)
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name FROM "accounts" WHERE (a_name= 'Bank')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name FROM "accounts" WHERE (a_name= 'Cash')[0m
+Started POST "/transactions" for 127.0.0.1 at 2013-12-20 17:29:06 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"20", "t_desc"=>"test"}, "commit"=>"Create Transaction"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1[0m  [["a_amount", 49000.0], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2[0m  [["a_amount", 1000.0], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00], ["from_account_id", 1], ["t_amount", 1000.0], ["t_date", Fri, 20 Dec 2013], ["t_desc", "test"], ["to_account_id", 2], ["updated_at", Fri, 20 Dec 2013 15:29:06 UTC +00:00]]
+Redirected to http://www.example.com/transactions/1
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2013-12-20 17:29:06 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTransaction Load (0.1ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2
+  Rendered transactions/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

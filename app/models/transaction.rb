@@ -30,20 +30,17 @@ class Transaction < ActiveRecord::Base
 			@asset_amount = asset.a_amount + @asset_amount
               
         end
-		puts @asset_amount.to_s + "ooooooooooooooooooooooooooo"
 		
 		@liability_amount = 0
         Account.select(:a_amount).where("a_type = 'Liability'").each do |liability|
 			@liability_amount = liability.a_amount + @liability_amount
               
         end
-		puts @liability_amount.to_s + "ooooooooooooooooooooooooooo"
         
 		@expense_amount = 0
         Account.select(:a_amount).where("a_type = 'Expense'").each do |expense|
 			@expense_amount = expense.a_amount + @expense_amount
         end
-		puts @expense_amount.to_s + "ooooooooooooooooooooooooooo"
 		
         @equity_amount = 0
 		@capital_equity_amount = 0
@@ -56,8 +53,6 @@ class Transaction < ActiveRecord::Base
 			end
         end       
 		@equity_amount = @capital_equity_amount - @other_equity_amount
-		puts @equity_amount.to_s + "ooooooooooooooooooooooooooo"
-       
 
 		if   (@asset_amount - @liability_amount + @expense_amount - @equity_amount) ==0
 			true

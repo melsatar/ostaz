@@ -23,6 +23,7 @@ require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
+require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "factories"))
 
 module WithinHelpers
   def with_scope(locator)
@@ -81,10 +82,11 @@ When /^(?:|I )fill in the following:$/ do |fields|
     When %{I fill in "#{name}" with "#{value}"}
   end
 end
-
+=begin
 When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
   select(value, :from => field)
 end
+=end
 
 When /^(?:|I )check "([^"]*)"$/ do |field|
   check(field)
