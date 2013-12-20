@@ -2,7 +2,7 @@
 
 <p>
   <strong>From Account:</strong>
-  <%= @transaction.from_account_id %>
+  <%#= @transaction.from_account_id %>
   <% Account.where(:id => @transaction.from_account_id).each do |account| %> 
    <tr>
      <td width="10"><%= account.a_name%></td>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>To Account:</strong>
-  <%= @transaction.to_account_id %>
+  <%#= @transaction.to_account_id %>
   <% Account.where(:id => @transaction.to_account_id).each do |account| %> 
    <tr>
      <td width="10"><%= account.a_name%></td>

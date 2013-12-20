@@ -1,17 +1,12 @@
 class Transaction < ActiveRecord::Base
-        @accounts = Account.all
+	@accounts = Account.all
 	belongs_to :from_account, class_name: Account#, before_add: [:check_amount_exist]
 	belongs_to :to_account, class_name: Account
         validates :t_amount, numericality: { greater_than: 0 }
-        account = Account.find_by_id(:from_account)
-        #attr_accessible :t_amount
-        #validates_associated Account
 
-      #before_create :check_amount_exist(account)
       before_create :check_amount_exist
       before_save :validate_all_accounts
       before_update :check_amount_exist
-      #validates :check_amount_exist
 
      def check_amount_exist
 		if Account.find_by_id(self.from_account_id).a_amount >= self.t_amount

@@ -73,8 +73,6 @@ class TransactionsController < ApplicationController
         	account_to = Account.find_by_id(transaction_params[:to_account_id])
         	account_to.a_amount = account_to.a_amount - @transaction.t_amount + transaction_params[:t_amount].to_f
         	account_to.save
-
-             
 	       
    	   end
 

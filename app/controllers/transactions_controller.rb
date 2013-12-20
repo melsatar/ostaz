@@ -30,20 +30,12 @@ class TransactionsController < ApplicationController
 	   account_from = Account.find_by_id(transaction_params[:from_account_id])
    	   account_from.a_amount = account_from.a_amount - transaction_params[:t_amount].to_f
 	   if account_from.a_amount >= 0
-
         	account_from.save
-
         	account_to = Account.find_by_id(transaction_params[:to_account_id])
         	account_to.a_amount = account_to.a_amount + transaction_params[:t_amount].to_f
         	account_to.save
-
-             
-	       
    	   end
-
    end
-
-
       respond_to do |format|
       if @transaction.save
         format.html { redirect_to @transaction, notice: 'Transaction was successfully created.' }
@@ -67,15 +59,11 @@ class TransactionsController < ApplicationController
 	   account_from = Account.find_by_id(transaction_params[:from_account_id])
    	   account_from.a_amount = account_from.a_amount + @transaction.t_amount - transaction_params[:t_amount].to_f
 	   if account_from.a_amount >= 0
-
         	account_from.save
-
         	account_to = Account.find_by_id(transaction_params[:to_account_id])
         	account_to.a_amount = account_to.a_amount - @transaction.t_amount + transaction_params[:t_amount].to_f
         	account_to.save
-	       
    	   end
-
    end
     respond_to do |format|
       if @transaction.update(transaction_params)
