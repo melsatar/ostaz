@@ -21,7 +21,6 @@ group :test do
   gem 'mechanize'
   gem 'rspec'
   gem 'factory_girl'
-  gem 'debugger'
 end
 
 group :production do

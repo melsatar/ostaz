@@ -26587,3 +26587,10 @@ Completed 200 OK in 112ms (Views: 75.0ms | ActiveRecord: 0.6ms)
   [1m[35mAccount Load (0.4ms)[0m  SELECT id FROM "accounts" WHERE (a_name = 'Bank')
   [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (a_name = 'Bank')[0m
   [1m[35mAccount Load (0.6ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (a_name = 'Cash')
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2013-12-20 18:12:08 +0200
+Processing by AccountsController#new as HTML
+  Rendered accounts/_form.html.erb (10.6ms)
+  Rendered accounts/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.4ms)
