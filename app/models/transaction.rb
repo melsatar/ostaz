@@ -12,7 +12,7 @@ class Transaction < ActiveRecord::Base
 		if Account.find_by_id(self.from_account_id).a_amount >= self.t_amount
             true
 		else
-			errors[:base] << Account.find_by_id(self.from_account_id).a_name + " Account does not have enough balance it only have = " + Account.find_by_id(self.from_account_id).a_amount.to_s
+		errors[:base] << Account.find_by_id(self.from_account_id).a_name + " Account does not have enough balance it only have = " + Account.find_by_id(self.from_account_id).a_amount.to_s
 			false 
              #return "The account does not have enough amount"
         end
@@ -59,4 +59,16 @@ class Transaction < ActiveRecord::Base
 				 #return "The account does not have enough amount"
         end
     end
+
+def self.search(amount,f_account, to_account, t_date)
+
+  @transactions = Transaction.all
+  @transactions = @transactions.where(:t_amount => amount) if amount.present?
+  @transactions = @transactions.where(:from_account_id => f_account) if f_account.present?
+  @transactions = @transactions.where(:to_account_id => to_account) if to_account.present?
+  @transactions = @transactions.where(:t_date => t_date) if t_date.present?
+  return @transactions
+  
+end
+
 end

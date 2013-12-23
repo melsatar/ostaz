@@ -1,9 +1,18 @@
 Project::Application.routes.draw do
-  resources :transactions
+  resources :transactions #do
+  #member do
+  #get 'search'
+  #end
+  #end
+
+  get '/transactions/search' => 'transactions#search'
+  #connect '/transactions/search' => 'transactions#search', :as => :search_transactions
+  
 
   resources :accounts
 
-  root: to=> 'accounts#index'
+  root :to=> 'accounts#index'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

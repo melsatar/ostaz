@@ -3,6 +3,23 @@ class AccountsController < ApplicationController
 
   def index
     @accounts = Account.all
+    @sort = nil
+    if params.has_key?(:sort)
+      @sort = params[:sort]
+      if @sort == 'name'
+	@accounts = Account.order("a_name")
+      elsif @sort == 'type'
+        @accounts = Account.order("a_type")
+      elsif @sort == 'amount'
+        @accounts = Account.order("a_amount")
+      else
+        @accounts = Account.all
+      end
+    end
+    if params.has_key?(:search)
+	@accounts = Account.search(params[:search])
+    end
+
   end
 
   def show

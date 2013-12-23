@@ -1,11 +1,18 @@
 <h1>Accounts Balance</h1>
 
+<%=form_tag accounts_path, :method => 'get' do %>
+  <p>Account Name
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :a_name => nil %>
+  </p>
+<% end %>
+
 <table>
   <thead>
     <tr>
-      <th>Account Name</th>
-      <th>Account Type</th>
-      <th>Account Amount</th>
+      <th><%=link_to 'Account Name', sort: :name %></th>
+      <th><%=link_to 'Account Type', sort: :type %></th>
+      <th><%=link_to 'Account Amount', sort: :amount %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -36,3 +43,5 @@
 <p>
 <%= link_to 'List all Transaction', transactions_path %>
 </p>
+
+

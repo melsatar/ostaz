@@ -5,6 +5,22 @@ class TransactionsController < ApplicationController
   # GET /transactions.json
   def index
     @transactions = Transaction.all
+    @sort = nil
+    if params.has_key?(:sort)
+      @sort = params[:sort]
+      if @sort == 'fname'
+	@transactions = Transaction.order("from_account_id")
+      elsif @sort == 'tname'
+        @transactions = Transaction.order("to_account_id")
+      elsif @sort == 'amount'
+        @transactions = Transaction.order("t_amount")
+      elsif @sort == 'date'
+        @transactions = Transaction.order("t_date")
+      else
+        @transactions = Transaction.all
+      end
+    end
+
   end
 
   # GET /transactions/1
@@ -30,20 +46,12 @@ class TransactionsController < ApplicationController
 	   account_from = Account.find_by_id(transaction_params[:from_account_id])
    	   account_from.a_amount = account_from.a_amount - transaction_params[:t_amount].to_f
 	   if account_from.a_amount >= 0
-
         	account_from.save
-
         	account_to = Account.find_by_id(transaction_params[:to_account_id])
         	account_to.a_amount = account_to.a_amount + transaction_params[:t_amount].to_f
         	account_to.save
-
-             
-	       
    	   end
-
    end
-
-
       respond_to do |format|
       if @transaction.save
         format.html { redirect_to @transaction, notice: 'Transaction was successfully created.' }
@@ -67,15 +75,11 @@ class TransactionsController < ApplicationController
 	   account_from = Account.find_by_id(transaction_params[:from_account_id])
    	   account_from.a_amount = account_from.a_amount + @transaction.t_amount - transaction_params[:t_amount].to_f
 	   if account_from.a_amount >= 0
-
         	account_from.save
-
         	account_to = Account.find_by_id(transaction_params[:to_account_id])
         	account_to.a_amount = account_to.a_amount - @transaction.t_amount + transaction_params[:t_amount].to_f
         	account_to.save
-	       
    	   end
-
    end
     respond_to do |format|
       if @transaction.update(transaction_params)
@@ -102,6 +106,7 @@ class TransactionsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_transaction
       @transaction = Transaction.find(params[:id])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

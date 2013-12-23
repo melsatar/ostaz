@@ -5,6 +5,22 @@ class TransactionsController < ApplicationController
   # GET /transactions.json
   def index
     @transactions = Transaction.all
+    @sort = nil
+    if params.has_key?(:sort)
+      @sort = params[:sort]
+      if @sort == 'fname'
+	@transactions = Transaction.order("from_account_id")
+      elsif @sort == 'tname'
+        @transactions = Transaction.order("to_account_id")
+      elsif @sort == 'amount'
+        @transactions = Transaction.order("t_amount")
+      elsif @sort == 'date'
+        @transactions = Transaction.order("t_date")
+      else
+        @transactions = Transaction.all
+      end
+    end
+
   end
 
   # GET /transactions/1

@@ -6,10 +6,10 @@
 <table>
   <thead>
     <tr>
-      <th>From Account</th>
-      <th>To Account</th>
-      <th>Transaction Amount</th>
-      <th>Transaction Date</th>
+      <th><%=link_to 'From Account', sort: :fname %></th>
+      <th><%=link_to 'To Account', sort: :tname %></th>
+      <th><%=link_to 'Transaction Amount', sort: :amount %></th>
+      <th><%=link_to 'Transaction Date', sort: :date %></th>
       <th>Transaction Description</th>
       <th></th>
       <th></th>
@@ -42,4 +42,7 @@
 <br>
 
 <%= link_to 'New Transaction', new_transaction_path %>
+<p>
+<%= link_to 'Search Transactions', search_path %>
+</p>
 
