@@ -5,6 +5,7 @@ class Transaction < ActiveRecord::Base
         validates :t_amount, numericality: { greater_than: 0 }
 
       before_create :check_amount_exist
+      before_save :check_amount_exist 
       before_save :validate_all_accounts
       before_update :check_amount_exist
 
@@ -63,10 +64,10 @@ class Transaction < ActiveRecord::Base
 def self.search(amount,f_account, to_account, t_date)
 
   @transactions = Transaction.all
-  @transactions = @transactions.where(:t_amount, amount) if amount.present?
-  @transactions = @transactions.where("from_account_id" , f_account) if f_account.present?
-  @transactions = @transactions.where(:to_account_id , to_account) if to_account.present?
-  @transactions = @transactions.where(:t_date , t_date) if t_date.present?
+  @transactions = @transactions.where(:t_amount => amount) if amount.present?
+  @transactions = @transactions.where(:from_account_id => f_account) if f_account.present?
+  @transactions = @transactions.where(:to_account_id => to_account) if to_account.present?
+  @transactions = @transactions.where(:t_date => t_date) if t_date.present?
   return @transactions
   
 end

@@ -2754,3 +2754,130 @@ Processing by TransactionsController#show as HTML
   Rendered transactions/show.html.erb within layouts/application (1.7ms)
 Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.3ms)
   [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:17:02 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (61.4ms)
+Completed 500 Internal Server Error in 149ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:17:03 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 4ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:17:59 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (61.8ms)
+Completed 500 Internal Server Error in 112ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:18:58 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (61.9ms)
+Completed 500 Internal Server Error in 112ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:20:21 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (61.3ms)
+Completed 500 Internal Server Error in 111ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:21:08 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (61.0ms)
+Completed 500 Internal Server Error in 111ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:22:29 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (60.4ms)
+Completed 500 Internal Server Error in 109ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:27:23 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (60.9ms)
+Completed 500 Internal Server Error in 110ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/Account" for 127.0.0.1 at 2013-12-24 18:28:27 +0200
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:29:23 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (60.8ms)
+Completed 500 Internal Server Error in 110ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:32:30 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (62.1ms)
+Completed 500 Internal Server Error in 114ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 18:32:40 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts"
+SQLite3::SQLException: no such table: accounts: SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (61.1ms)
+Completed 500 Internal Server Error in 110ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

@@ -48053,3 +48053,892 @@ Processing by PagesController#search as HTML
   [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 7[0m
   Rendered pages/search.html.erb (8.5ms)
 Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.9ms)
+  [1m[36m (262.8ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (166.7ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (214.2ms)[0m  [1mDROP TABLE "transactions"[0m
+  [1m[35m (173.9ms)[0m  CREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:32:09 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:32:09 UTC +00:00]]
+  [1m[36m (231.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:32:10 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:32:10 UTC +00:00]]
+  [1m[35m (174.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:32:10 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:32:10 UTC +00:00]]
+  [1m[36m (179.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:32:10 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:32:10 UTC +00:00]]
+  [1m[35m (171.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Tue, 24 Dec 2013 17:32:10 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:32:10 UTC +00:00]]
+  [1m[36m (171.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Dept"], ["a_type", "Liability"], ["created_at", Tue, 24 Dec 2013 17:32:10 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:32:10 UTC +00:00]]
+  [1m[35m (176.2ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Tue, 24 Dec 2013 17:32:11 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:32:11 UTC +00:00]]
+  [1m[36m (217.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Tue, 24 Dec 2013 17:32:11 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:32:11 UTC +00:00]]
+  [1m[35m (266.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Tue, 24 Dec 2013 17:32:11 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:32:11 UTC +00:00]]
+  [1m[36m (179.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Tue, 24 Dec 2013 17:32:11 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:32:11 UTC +00:00]]
+  [1m[35m (212.5ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 19:32:27 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 190ms (Views: 153.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:28 +0200
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-24 19:32:34 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered transactions/_form.html.erb (82.4ms)
+  Rendered transactions/new.html.erb within layouts/application (86.0ms)
+Completed 200 OK in 131ms (Views: 96.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2013-12-24 19:32:41 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbmJCXGj+TciyaPksFWRa3mpreyYE+L/nDqiVDh3j9I=", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"24", "t_desc"=>""}, "commit"=>"Create Transaction"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (27.1ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1[0m  [["a_amount", 49000.0], ["updated_at", Tue, 24 Dec 2013 17:32:41 UTC +00:00]]
+  [1m[35m (685.8ms)[0m  commit transaction
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2[0m  [["a_amount", 1000.0], ["updated_at", Tue, 24 Dec 2013 17:32:42 UTC +00:00]]
+  [1m[35m (218.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 24 Dec 2013 17:32:42 UTC +00:00], ["from_account_id", 1], ["t_amount", 1000.0], ["t_date", Tue, 24 Dec 2013], ["t_desc", ""], ["to_account_id", 2], ["updated_at", Tue, 24 Dec 2013 17:32:42 UTC +00:00]]
+  [1m[36m (391.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/transactions/1
+Completed 302 Found in 1362ms (ActiveRecord: 1325.6ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTransaction Load (0.6ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2
+  Rendered transactions/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 19.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:43 +0200
+
+
+Started GET "/transactions" for 127.0.0.1 at 2013-12-24 19:32:44 +0200
+Processing by TransactionsController#index as HTML
+  [1m[36mTransaction Load (0.5ms)[0m  [1mSELECT "transactions".* FROM "transactions"[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2[0m
+  [1m[35mTransaction Load (0.1ms)[0m  SELECT t_date AS transaction_date, sum(t_amount) as amount_sum FROM "transactions" GROUP BY t_date
+  Rendered transactions/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-24 19:32:46 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered transactions/_form.html.erb (11.5ms)
+  Rendered transactions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbmJCXGj+TciyaPksFWRa3mpreyYE+L/nDqiVDh3j9I=", "transaction"=>{"from_account_id"=>"2", "to_account_id"=>"1", "t_amount"=>"", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"24", "t_desc"=>""}, "commit"=>"Create Transaction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (id = 2)[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (id = 1)
+  Rendered transactions/_form.html.erb (15.5ms)
+  Rendered transactions/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:53 +0200
+
+
+Started POST "/transactions" for 127.0.0.1 at 2013-12-24 19:32:58 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbmJCXGj+TciyaPksFWRa3mpreyYE+L/nDqiVDh3j9I=", "transaction"=>{"from_account_id"=>"2", "to_account_id"=>"1", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"24", "t_desc"=>""}, "commit"=>"Create Transaction"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2[0m  [["a_amount", 0.0], ["updated_at", Tue, 24 Dec 2013 17:32:58 UTC +00:00]]
+  [1m[35m (378.1ms)[0m  commit transaction
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1[0m  [["a_amount", 50000.0], ["updated_at", Tue, 24 Dec 2013 17:32:58 UTC +00:00]]
+  [1m[35m (209.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35mAccount Load (0.5ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (id = 2)
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (id = 1)[0m
+  Rendered transactions/_form.html.erb (10.3ms)
+  Rendered transactions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 648ms (Views: 17.0ms | ActiveRecord: 590.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:32:59 +0200
+
+
+Started POST "/transactions" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbmJCXGj+TciyaPksFWRa3mpreyYE+L/nDqiVDh3j9I=", "transaction"=>{"from_account_id"=>"2", "to_account_id"=>"1", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"24", "t_desc"=>""}, "commit"=>"Create Transaction"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (id = 2)
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (id = 1)[0m
+  Rendered transactions/_form.html.erb (5.8ms)
+  Rendered transactions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 26ms (Views: 9.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:22 +0200
+
+
+Started GET "/transactions" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+Processing by TransactionsController#index as HTML
+  [1m[35mTransaction Load (0.2ms)[0m  SELECT "transactions".* FROM "transactions"
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2
+  [1m[36mTransaction Load (0.1ms)[0m  [1mSELECT t_date AS transaction_date, sum(t_amount) as amount_sum FROM "transactions" GROUP BY t_date[0m
+  Rendered transactions/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:33:28 +0200
+  [1m[36m (250.3ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (515.4ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (234.8ms)[0m  [1mDROP TABLE "transactions"[0m
+  [1m[35m (362.4ms)[0m  CREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:33:43 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:33:43 UTC +00:00]]
+  [1m[36m (282.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:33:44 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:33:44 UTC +00:00]]
+  [1m[35m (267.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:33:44 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:33:44 UTC +00:00]]
+  [1m[36m (179.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:33:44 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:33:44 UTC +00:00]]
+  [1m[35m (187.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Tue, 24 Dec 2013 17:33:44 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:33:44 UTC +00:00]]
+  [1m[36m (302.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Dept"], ["a_type", "Liability"], ["created_at", Tue, 24 Dec 2013 17:33:45 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:33:45 UTC +00:00]]
+  [1m[35m (180.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Tue, 24 Dec 2013 17:33:45 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:33:45 UTC +00:00]]
+  [1m[36m (162.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Tue, 24 Dec 2013 17:33:45 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:33:45 UTC +00:00]]
+  [1m[35m (287.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Tue, 24 Dec 2013 17:33:45 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:33:45 UTC +00:00]]
+  [1m[36m (286.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Tue, 24 Dec 2013 17:33:46 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:33:46 UTC +00:00]]
+  [1m[35m (189.3ms)[0m  commit transaction
+
+
+Started GET "/transactions" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TransactionsController#index as HTML
+  [1m[35mTransaction Load (0.2ms)[0m  SELECT "transactions".* FROM "transactions"
+  [1m[36mTransaction Load (0.1ms)[0m  [1mSELECT t_date AS transaction_date, sum(t_amount) as amount_sum FROM "transactions" GROUP BY t_date[0m
+  Rendered transactions/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 119ms (Views: 73.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:02 +0200
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-24 19:34:07 +0200
+Processing by TransactionsController#new as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (74.7ms)
+  Rendered transactions/new.html.erb within layouts/application (105.6ms)
+Completed 200 OK in 116ms (Views: 111.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2013-12-24 19:34:15 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbmJCXGj+TciyaPksFWRa3mpreyYE+L/nDqiVDh3j9I=", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"500", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"24", "t_desc"=>""}, "commit"=>"Create Transaction"}
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (26.6ms)[0m  UPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1  [["a_amount", 49500.0], ["updated_at", Tue, 24 Dec 2013 17:34:15 UTC +00:00]]
+  [1m[36m (412.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2  [["a_amount", 500.0], ["updated_at", Tue, 24 Dec 2013 17:34:15 UTC +00:00]]
+  [1m[36m (393.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 24 Dec 2013 17:34:16 UTC +00:00], ["from_account_id", 1], ["t_amount", 500.0], ["t_date", Tue, 24 Dec 2013], ["t_desc", ""], ["to_account_id", 2], ["updated_at", Tue, 24 Dec 2013 17:34:16 UTC +00:00]]
+  [1m[36m (427.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/transactions/1
+Completed 302 Found in 1291ms (ActiveRecord: 1262.9ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTransaction Load (0.5ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2
+  Rendered transactions/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:16 +0200
+
+
+Started GET "/transactions" for 127.0.0.1 at 2013-12-24 19:34:18 +0200
+Processing by TransactionsController#index as HTML
+  [1m[36mTransaction Load (0.2ms)[0m  [1mSELECT "transactions".* FROM "transactions"[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2[0m
+  [1m[35mTransaction Load (0.1ms)[0m  SELECT t_date AS transaction_date, sum(t_amount) as amount_sum FROM "transactions" GROUP BY t_date
+  Rendered transactions/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-24 19:34:20 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered transactions/_form.html.erb (17.1ms)
+  Rendered transactions/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2013-12-24 19:34:29 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbmJCXGj+TciyaPksFWRa3mpreyYE+L/nDqiVDh3j9I=", "transaction"=>{"from_account_id"=>"2", "to_account_id"=>"1", "t_amount"=>"500", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"24", "t_desc"=>""}, "commit"=>"Create Transaction"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2[0m  [["a_amount", 0.0], ["updated_at", Tue, 24 Dec 2013 17:34:29 UTC +00:00]]
+  [1m[35m (400.1ms)[0m  commit transaction
+  [1m[36mAccount Load (0.5ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1[0m  [["a_amount", 50000.0], ["updated_at", Tue, 24 Dec 2013 17:34:30 UTC +00:00]]
+  [1m[35m (258.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35mAccount Load (0.6ms)[0m  SELECT "accounts".* FROM "accounts" WHERE (id = 2)
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE (id = 1)[0m
+  Rendered transactions/_form.html.erb (15.6ms)
+  Rendered transactions/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 700ms (Views: 23.4ms | ActiveRecord: 662.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:34:30 +0200
+  [1m[36m (211.1ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (184.6ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (223.0ms)[0m  [1mDROP TABLE "transactions"[0m
+  [1m[35m (264.1ms)[0m  CREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:35:26 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:35:26 UTC +00:00]]
+  [1m[36m (278.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:35:26 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:35:26 UTC +00:00]]
+  [1m[35m (203.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:35:26 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:35:26 UTC +00:00]]
+  [1m[36m (187.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Tue, 24 Dec 2013 17:35:26 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:35:26 UTC +00:00]]
+  [1m[35m (261.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (26.6ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Tue, 24 Dec 2013 17:35:27 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:35:27 UTC +00:00]]
+  [1m[36m (180.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Dept"], ["a_type", "Liability"], ["created_at", Tue, 24 Dec 2013 17:35:27 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:35:27 UTC +00:00]]
+  [1m[35m (196.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Tue, 24 Dec 2013 17:35:27 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:35:27 UTC +00:00]]
+  [1m[36m (179.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Tue, 24 Dec 2013 17:35:27 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:35:27 UTC +00:00]]
+  [1m[35m (204.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Tue, 24 Dec 2013 17:35:28 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:35:28 UTC +00:00]]
+  [1m[36m (229.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Tue, 24 Dec 2013 17:35:28 UTC +00:00], ["updated_at", Tue, 24 Dec 2013 17:35:28 UTC +00:00]]
+  [1m[35m (371.3ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 119ms (Views: 82.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:37 +0200
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-24 19:35:42 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered transactions/_form.html.erb (73.5ms)
+  Rendered transactions/new.html.erb within layouts/application (76.7ms)
+Completed 200 OK in 114ms (Views: 80.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2013-12-24 19:35:53 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbmJCXGj+TciyaPksFWRa3mpreyYE+L/nDqiVDh3j9I=", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"500", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"24", "t_desc"=>""}, "commit"=>"Create Transaction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')
+  [1m[36mSQL (26.6ms)[0m  [1mINSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 24 Dec 2013 17:35:53 UTC +00:00], ["from_account_id", 1], ["t_amount", 500.0], ["t_date", Tue, 24 Dec 2013], ["t_desc", ""], ["to_account_id", 2], ["updated_at", Tue, 24 Dec 2013 17:35:53 UTC +00:00]]
+  [1m[35m (341.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/transactions/1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1[0m  [["a_amount", 49500.0], ["updated_at", Tue, 24 Dec 2013 17:35:53 UTC +00:00]]
+  [1m[35m (234.7ms)[0m  commit transaction
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2[0m  [["a_amount", 500.0], ["updated_at", Tue, 24 Dec 2013 17:35:53 UTC +00:00]]
+  [1m[35m (319.8ms)[0m  commit transaction
+Completed 302 Found in 949ms (ActiveRecord: 925.2ms)
+
+
+Started GET "/transactions/1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.3ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2[0m
+  Rendered transactions/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:35:54 +0200
+
+
+Started GET "/transactions" for 127.0.0.1 at 2013-12-24 19:35:55 +0200
+Processing by TransactionsController#index as HTML
+  [1m[35mTransaction Load (0.2ms)[0m  SELECT "transactions".* FROM "transactions"
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2
+  [1m[36mTransaction Load (0.1ms)[0m  [1mSELECT t_date AS transaction_date, sum(t_amount) as amount_sum FROM "transactions" GROUP BY t_date[0m
+  Rendered transactions/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-24 19:35:57 +0200
+Processing by TransactionsController#new as HTML
+  [1m[35mAccount Load (0.5ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (9.4ms)
+  Rendered transactions/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2013-12-24 19:36:06 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BbmJCXGj+TciyaPksFWRa3mpreyYE+L/nDqiVDh3j9I=", "transaction"=>{"from_account_id"=>"2", "to_account_id"=>"1", "t_amount"=>"500", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"24", "t_desc"=>""}, "commit"=>"Create Transaction"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 24 Dec 2013 17:36:06 UTC +00:00], ["from_account_id", 2], ["t_amount", 500.0], ["t_date", Tue, 24 Dec 2013], ["t_desc", ""], ["to_account_id", 1], ["updated_at", Tue, 24 Dec 2013 17:36:06 UTC +00:00]]
+  [1m[36m (609.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/transactions/2
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2  [["a_amount", 0.0], ["updated_at", Tue, 24 Dec 2013 17:36:06 UTC +00:00]]
+  [1m[36m (330.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1  [["a_amount", 50000.0], ["updated_at", Tue, 24 Dec 2013 17:36:07 UTC +00:00]]
+  [1m[36m (231.6ms)[0m  [1mcommit transaction[0m
+Completed 302 Found in 1193ms (ActiveRecord: 1174.9ms)
+
+
+Started GET "/transactions/2" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTransaction Load (0.1ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1
+  Rendered transactions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:07 +0200
+
+
+Started GET "/transactions" for 127.0.0.1 at 2013-12-24 19:36:09 +0200
+Processing by TransactionsController#index as HTML
+  [1m[36mTransaction Load (0.5ms)[0m  [1mSELECT "transactions".* FROM "transactions"[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1[0m
+  [1m[35mTransaction Load (0.1ms)[0m  SELECT t_date AS transaction_date, sum(t_amount) as amount_sum FROM "transactions" GROUP BY t_date
+  Rendered transactions/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 19:36:11 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-24 19:36:14 +0200
