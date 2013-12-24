@@ -46,3 +46,33 @@
 <%= link_to 'Search Transactions', search_path %>
 </p>
 
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Date');
+        data.addColumn('number', 'Amount');
+	<% @amount_by_day = Transaction.group(:t_date).select("t_date AS transaction_date", "sum(t_amount) as amount_sum") %>
+
+        <% @amount_by_day.each do |transactions| %>
+        	data.addRow(["<%= transactions.transaction_date %>", <%= transactions.amount_sum %>]);
+	<% end %>
+
+        var options = {
+          title: 'Amount of transactions per day',
+          vAxis: {title: 'Day',  titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
