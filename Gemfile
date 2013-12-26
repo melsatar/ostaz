@@ -28,6 +28,8 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+gem 'simplecov', :require => false, :group => :test
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

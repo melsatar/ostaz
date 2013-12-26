@@ -5,11 +5,19 @@ Feature: adding a transaction
   I want to see the added transaction
 
 Scenario: adding a transaction
-        Given I am on the homepage
         Given the following accounts
-	| a_name | a_amount| a_type |
-        | Bank   | 50000   | Asset  |
-	| Cash   | 2000    | Asset  |
+	| a_name             | a_type    | a_amount |
+        | Bank               | Asset     | 50000    |
+	| Cash               | Asset     | 0.0      |
+	| Equipment	     | Asset	 | 0.0	    |	
+	| Accounts Payable   | Liability | 0.0	    |
+	| Debt	    	     | Liability | 0.0	    |
+	| Accounts Receivable|	Asset	 | 0.0      |
+	| Office Expenses    |	Expense	 | 0.0	    |
+	| Project Expenses   |	Expense	 | 0.0	    |
+	| Capital	     |	Equity	 | 50000.0  |	
+	| Revenue	     |	Equity	 | 0.0      |
+        Given I am on the homepage
         And I follow "New Transaction"
 	Then I should be on the new transaction page
 	Then I select "Bank" from "transaction_from_account_id"

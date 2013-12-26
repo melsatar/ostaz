@@ -1,3 +1,7 @@
+require 'simplecov'
+SimpleCov.start
+
+
 Given /^the following accounts$/ do |accounts|
      Account.create(accounts.hashes)
 end
