@@ -14,7 +14,7 @@ class Transaction < ActiveRecord::Base
 	belongs_to :from_account, class_name: Account#, before_add: [:check_amount_exist]
 	belongs_to :to_account, class_name: Account
         validates :t_amount, numericality: { greater_than: 0 }
-        validates_attachment :t_attach,	:content_type => { :content_type => ["image/jpg","image/jpeg", "image/gif", "image/png"] }
+        validates_attachment :t_attac,	:content_type => { :content_type => ["image/jpg","image/jpeg", "image/gif", "image/png"] }
 
       #before_create :check_amount_exist
       before_save :check_amount_exist 
