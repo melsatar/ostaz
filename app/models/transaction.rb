@@ -69,7 +69,6 @@ def self.search(amount,f_account, to_account, t_date)
   @transactions = @transactions.where(:to_account_id => to_account) if to_account.present?
   @transactions = @transactions.where(:t_date => t_date) if t_date.present?
   return @transactions
-  
 end
 
 end

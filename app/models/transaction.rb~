@@ -4,7 +4,7 @@ class Transaction < ActiveRecord::Base
 	belongs_to :to_account, class_name: Account
         validates :t_amount, numericality: { greater_than: 0 }
 
-      before_create :check_amount_exist
+      #before_create :check_amount_exist
       before_save :check_amount_exist 
       before_save :validate_all_accounts
       before_update :check_amount_exist
