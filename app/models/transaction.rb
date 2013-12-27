@@ -1,8 +1,20 @@
 class Transaction < ActiveRecord::Base
+	has_attached_file :t_attac, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+	#accepts_nested_attributes_for :t_attach
+	#attr_accessor :t_attac_file_name
+	#attr_accessor :t_attac_content_type
+	#attr_accessor :t_attac_file_size
+	#attr_accessor :t_attac_updated_at
+	#attr_accessible :t_attach_file_name
+	#attr_accessible :t_attach_content_type
+	#attr_accessible :t_attach_file_size
+	#attr_accessible :t_attach_updated_at
+	
 	@accounts = Account.all
 	belongs_to :from_account, class_name: Account#, before_add: [:check_amount_exist]
 	belongs_to :to_account, class_name: Account
         validates :t_amount, numericality: { greater_than: 0 }
+        validates_attachment :t_attac,	:content_type => { :content_type => ["image/jpg","image/jpeg", "image/gif", "image/png"] }
 
       #before_create :check_amount_exist
       before_save :check_amount_exist 

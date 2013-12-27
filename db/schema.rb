@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131207140703) do
+ActiveRecord::Schema.define(version: 20131227010019) do
 
   create_table "accounts", force: true do |t|
     t.string   "a_name"
@@ -29,6 +29,10 @@ ActiveRecord::Schema.define(version: 20131207140703) do
     t.text     "t_desc"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "t_attac_file_name"
+    t.string   "t_attac_content_type"
+    t.integer  "t_attac_file_size"
+    t.datetime "t_attac_updated_at"
   end
 
 end

@@ -71,18 +71,6 @@ class TransactionsController < ApplicationController
   # PATCH/PUT /transactions/1.json
   def update
 
-
- if transaction_params[:t_amount].to_f > 0
-	   current_transaction = Transaction.find_by_id(transaction_params[:id])
-	   account_from = Account.find_by_id(transaction_params[:from_account_id])
-   	   account_from.a_amount = account_from.a_amount + @transaction.t_amount - transaction_params[:t_amount].to_f
-	   if account_from.a_amount >= 0
-        	account_from.save
-        	account_to = Account.find_by_id(transaction_params[:to_account_id])
-        	account_to.a_amount = account_to.a_amount - @transaction.t_amount + transaction_params[:t_amount].to_f
-        	account_to.save
-   	   end
-   end
     respond_to do |format|
       if @transaction.update(transaction_params)
         format.html { redirect_to @transaction, notice: 'Transaction was successfully updated.' }
@@ -92,6 +80,19 @@ class TransactionsController < ApplicationController
         format.json { render json: @transaction.errors, status: :unprocessable_entity }
       end
     end
+
+    if transaction_params[:t_amount].to_f > 0
+	   current_transaction = Transaction.find_by_id(transaction_params[:id])
+	   account_from = Account.find_by_id(transaction_params[:from_account_id])
+   	   account_from.a_amount = account_from.a_amount + @transaction.t_amount - transaction_params[:t_amount].to_f
+	   if account_from.a_amount >= 0
+        	account_from.save
+        	account_to = Account.find_by_id(transaction_params[:to_account_id])
+        	account_to.a_amount = account_to.a_amount - @transaction.t_amount + transaction_params[:t_amount].to_f
+        	account_to.save
+   	   end
+    end
+ 
   end
 
   # DELETE /transactions/1
@@ -112,6 +113,8 @@ class TransactionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def transaction_params
-      params.require(:transaction).permit(:from_account_id, :to_account_id, :t_amount, :t_date, :t_desc)
+      params.require(:transaction).permit(:from_account_id, :to_account_id, :t_amount, :t_date, :t_desc, :t_attac)
+      #, :t_attach_file_name, :t_attach_content_type, :t_attach_file_size, :t_attach_updated_at)
+      #params.require(:transaction).permit(:t_attach)
     end
 end
