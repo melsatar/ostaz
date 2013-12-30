@@ -1,19 +1,7 @@
 require 'simplecov'
 SimpleCov.start
 
-When /^I log in as "([^\"]*)" with "([^\"]*)"$/ do |username, password|
-  puts "got into the test-helper with: #{username.inspect} and #{password.inspect}"
-  #visit authorization_path
-  authorize username, password
-  def authorize
-    puts "in the authorize method before actually trying to authorize"
-    authenticate_or_request_with_http_basic do |username, password|
-    puts "inside authorize, trying to authenticate against: #{username.inspect} and #{password.inspect}"
-    username == "melsatar@hotmail.com" && password == "12345678"
-    end
-  end
 
-end
 
 
 Given(/^Account type "(.*?)" exist$/) do |arg1|
