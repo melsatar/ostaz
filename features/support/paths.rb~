@@ -13,7 +13,7 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the ?home\s?page$/ then '/Account'
+    when /^the ?home\s?page$/ then '/accounts'
     when /^the transactions page$/ then '/transactions'
     when /^the new transactions page$/ then '/transactions/new'
     when /^the show transactions page$/ then '/transactions/show'

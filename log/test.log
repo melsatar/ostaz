@@ -5380,3 +5380,639 @@ Processing by TransactionsController#show as HTML
   Rendered transactions/show.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms)
   [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:03:33 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 52ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:03:34 +0200
+Processing by Devise::SessionsController#new as HTML
+Completed 500 Internal Server Error in 6ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:03:34 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 0ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:03:34 +0200
+Processing by Devise::SessionsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:09:52 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 52ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:09:52 +0200
+Processing by Devise::SessionsController#new as HTML
+Completed 500 Internal Server Error in 36ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:12:05 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 52ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:12:05 +0200
+Processing by Devise::SessionsController#new as HTML
+Completed 500 Internal Server Error in 5ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:12:05 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 1ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:12:05 +0200
+Processing by Devise::SessionsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:16:01 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 53ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:16:01 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (110.6ms)
+Completed 200 OK in 241ms (Views: 194.7ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:16:02 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 1ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:16:02 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+  [1m[35mSQL (40.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:02 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:16:57 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 52ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:16:57 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.9ms)
+Completed 200 OK in 202ms (Views: 156.9ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:16:58 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 0ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:16:58 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+  [1m[35mSQL (39.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:16:58 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:17:34 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:17:35 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.7ms)
+Completed 200 OK in 200ms (Views: 185.2ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:21:13 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:21:13 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (107.3ms)
+Completed 200 OK in 200ms (Views: 185.9ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:22:32 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:22:32 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 200ms (Views: 185.2ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:23:03 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:23:03 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (109.8ms)
+Completed 200 OK in 205ms (Views: 190.1ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:24:01 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:24:01 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (109.5ms)
+Completed 200 OK in 204ms (Views: 189.4ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:27:45 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:27:45 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (115.5ms)
+Completed 200 OK in 211ms (Views: 196.3ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:28:43 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 27ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:28:43 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (107.1ms)
+Completed 200 OK in 200ms (Views: 185.5ms | ActiveRecord: 2.0ms)
+  [1m[35mSQL (36.5ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:28:43 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:29:56 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:29:56 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.7ms)
+Completed 200 OK in 200ms (Views: 185.2ms | ActiveRecord: 2.1ms)
+  [1m[35mSQL (36.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:29:56 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:31:31 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 52ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:31:31 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 206ms (Views: 160.3ms | ActiveRecord: 2.0ms)
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:31:32 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:33:04 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:33:04 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (108.1ms)
+Completed 200 OK in 202ms (Views: 187.4ms | ActiveRecord: 2.0ms)
+  [1m[35mSQL (37.4ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:33:04 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:34:10 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:34:10 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (110.0ms)
+Completed 200 OK in 205ms (Views: 190.1ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:35:32 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:35:32 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.8ms)
+Completed 200 OK in 199ms (Views: 184.8ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:36:59 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:36:59 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (110.1ms)
+Completed 200 OK in 205ms (Views: 190.6ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:38:06 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:38:06 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.8ms)
+Completed 200 OK in 200ms (Views: 185.2ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:38:37 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:38:37 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.6ms)
+Completed 200 OK in 200ms (Views: 184.9ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:39:15 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:39:15 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (106.7ms)
+Completed 200 OK in 200ms (Views: 185.5ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'testing@man.net' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (5.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 30 Dec 2013 19:47:19 UTC +00:00], ["email", "testing@man.net"], ["encrypted_password", "$2a$04$irMCrV/g.A.uCiamBEsWdeceNAvIm3QE5ytIUp.9iqRxO6/hmWRaq"], ["updated_at", Mon, 30 Dec 2013 19:47:19 UTC +00:00]]
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:47:19 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (86.0ms)
+Completed 200 OK in 218ms (Views: 195.2ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:47:20 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'testing@man.net' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["current_sign_in_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 46ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2013-12-30 21:47:20 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:47:20 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-30 21:47:20 +0200
+Processing by TransactionsController#new as HTML
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (53.6ms)
+  Rendered transactions/new.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 102ms (Views: 59.2ms | ActiveRecord: 0.5ms)
+Started POST "/transactions" for 127.0.0.1 at 2013-12-30 21:47:20 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"30", "t_desc"=>"test", "t_attac"=>#<ActionDispatch::Http::UploadedFile:0x00000005ed05d0 @tempfile=#<File:/tmp/RackMultipart20131230-8680-10nl3rc>, @original_filename="an_image.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"transaction[t_attac]\"; filename=\"an_image.png\"\r\nContent-Type: image/png\r\nContent-Length: 14424\r\n">}, "commit"=>"Create Transaction"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/an_image20131230-8680-1monash.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/an_image20131230-8680-1monash.png[0]'
+Command :: identify -format %m '/tmp/an_image20131230-8680-1monash.png[0]'
+Command :: identify -format %m '/tmp/an_image20131230-8680-1monash.png[0]'
+Command :: convert '/tmp/an_image20131230-8680-1monash.png[0]' -auto-orient -resize "300x300>" '/tmp/an_image20131230-8680-1monash20131230-8680-12iyh40'
+Command :: file -b --mime '/tmp/an_image20131230-8680-1monash20131230-8680-12iyh40'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/an_image20131230-8680-1monash.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/an_image20131230-8680-1monash.png[0]'
+Command :: identify -format %m '/tmp/an_image20131230-8680-1monash.png[0]'
+Command :: identify -format %m '/tmp/an_image20131230-8680-1monash.png[0]'
+Command :: convert '/tmp/an_image20131230-8680-1monash.png[0]' -auto-orient -resize "100x100>" '/tmp/an_image20131230-8680-1monash20131230-8680-1schrsd'
+Command :: file -b --mime '/tmp/an_image20131230-8680-1monash20131230-8680-1schrsd'
+  [1m[35mAccount Load (0.6ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')
+Binary data inserted for `string` type on column `t_attac_content_type`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_attac_content_type", "t_attac_file_name", "t_attac_file_size", "t_attac_updated_at", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["from_account_id", 1], ["t_amount", 1000.0], ["t_attac_content_type", "image/png"], ["t_attac_file_name", "an_image.png"], ["t_attac_file_size", 14424], ["t_attac_updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00], ["t_date", Mon, 30 Dec 2013], ["t_desc", "test"], ["to_account_id", 2], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+Redirected to http://www.example.com/transactions/1
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1[0m  [["a_amount", 49000.0], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2[0m  [["a_amount", 1000.0], ["updated_at", Mon, 30 Dec 2013 19:47:20 UTC +00:00]]
+Completed 302 Found in 404ms (ActiveRecord: 2.7ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2013-12-30 21:47:20 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTransaction Load (0.1ms)[0m  SELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2
+  Rendered transactions/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'testing@man.net' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (5.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 30 Dec 2013 19:47:52 UTC +00:00], ["email", "testing@man.net"], ["encrypted_password", "$2a$04$080c6vuGYFNzsa5PNW2fdurK/b.nEeIKShoGAMuexyauJJ6nfp0OK"], ["updated_at", Mon, 30 Dec 2013 19:47:52 UTC +00:00]]
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:47:52 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (84.6ms)
+Completed 200 OK in 216ms (Views: 186.7ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:47:52 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'testing@man.net' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Mon, 30 Dec 2013 19:47:52 UTC +00:00], ["current_sign_in_at", Mon, 30 Dec 2013 19:47:52 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Mon, 30 Dec 2013 19:47:52 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 55ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2013-12-30 21:47:52 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:47:52 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2013-12-30 21:47:52 +0200
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered accounts/_form.html.erb (8.6ms)
+  Rendered accounts/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+Started POST "/accounts" for 127.0.0.1 at 2013-12-30 21:47:52 +0200
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"a_name"=>"Test Account", "a_type"=>"Asset", "a_amount"=>"1000"}, "commit"=>"Create Account"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 1000.0], ["a_name", "Test Account"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:47:52 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:47:52 UTC +00:00]]
+Redirected to http://www.example.com/accounts/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/accounts/1" for 127.0.0.1 at 2013-12-30 21:47:52 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered accounts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'testing@man.net' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (5.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 30 Dec 2013 19:48:04 UTC +00:00], ["email", "testing@man.net"], ["encrypted_password", "$2a$04$rCqWiC7KwsfUT3mEdawj3OJgA7juZVkccs8GcXKcBG9lxnBLw47wm"], ["updated_at", Mon, 30 Dec 2013 19:48:04 UTC +00:00]]
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:48:04 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (86.0ms)
+Completed 200 OK in 219ms (Views: 167.1ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:48:04 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'testing@man.net' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["current_sign_in_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 76ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered accounts/_form.html.erb (8.8ms)
+  Rendered accounts/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+Started POST "/accounts" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"a_name"=>"Test Account", "a_type"=>"Asset", "a_amount"=>"1000"}, "commit"=>"Create Account"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 1000.0], ["a_name", "Test Account"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+Redirected to http://www.example.com/accounts/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/accounts/1" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered accounts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'testing@man.net' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["email", "testing@man.net"], ["encrypted_password", "$2a$04$b6d4vruFPm/vTbDQetdl9.4QcYJFTKZMFJuk0HUCwxoYqqg/IVTtu"], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'testing@man.net' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["current_sign_in_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+Started GET "/accounts" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+Started GET "/transactions/new" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered transactions/_form.html.erb (54.4ms)
+  Rendered transactions/new.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 104ms (Views: 60.1ms | ActiveRecord: 0.5ms)
+Started POST "/transactions" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"1000", "t_date(1i)"=>"2013", "t_date(2i)"=>"12", "t_date(3i)"=>"30", "t_desc"=>"test", "t_attac"=>#<ActionDispatch::Http::UploadedFile:0x00000005311ac8 @tempfile=#<File:/tmp/RackMultipart20131230-8747-1pjpifk>, @original_filename="an_image.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"transaction[t_attac]\"; filename=\"an_image.png\"\r\nContent-Type: image/png\r\nContent-Length: 14424\r\n">}, "commit"=>"Create Transaction"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/an_image20131230-8747-c9fk7t.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/an_image20131230-8747-c9fk7t.png[0]'
+Command :: identify -format %m '/tmp/an_image20131230-8747-c9fk7t.png[0]'
+Command :: identify -format %m '/tmp/an_image20131230-8747-c9fk7t.png[0]'
+Command :: convert '/tmp/an_image20131230-8747-c9fk7t.png[0]' -auto-orient -resize "300x300>" '/tmp/an_image20131230-8747-c9fk7t20131230-8747-1dw0ikf'
+Command :: file -b --mime '/tmp/an_image20131230-8747-c9fk7t20131230-8747-1dw0ikf'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/an_image20131230-8747-c9fk7t.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/an_image20131230-8747-c9fk7t.png[0]'
+Command :: identify -format %m '/tmp/an_image20131230-8747-c9fk7t.png[0]'
+Command :: identify -format %m '/tmp/an_image20131230-8747-c9fk7t.png[0]'
+Command :: convert '/tmp/an_image20131230-8747-c9fk7t.png[0]' -auto-orient -resize "100x100>" '/tmp/an_image20131230-8747-c9fk7t20131230-8747-1wc99ma'
+Command :: file -b --mime '/tmp/an_image20131230-8747-c9fk7t20131230-8747-1wc99ma'
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')[0m
+Binary data inserted for `string` type on column `t_attac_content_type`
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_attac_content_type", "t_attac_file_name", "t_attac_file_size", "t_attac_updated_at", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["from_account_id", 1], ["t_amount", 1000.0], ["t_attac_content_type", "image/png"], ["t_attac_file_name", "an_image.png"], ["t_attac_file_size", 14424], ["t_attac_updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00], ["t_date", Mon, 30 Dec 2013], ["t_desc", "test"], ["to_account_id", 2], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+Redirected to http://www.example.com/transactions/1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1  [["a_amount", 49000.0], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2  [["a_amount", 1000.0], ["updated_at", Mon, 30 Dec 2013 19:48:05 UTC +00:00]]
+Completed 302 Found in 364ms (ActiveRecord: 3.8ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2013-12-30 21:48:05 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2[0m
+  Rendered transactions/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction

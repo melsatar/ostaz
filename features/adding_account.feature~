@@ -5,6 +5,7 @@ Feature: adding an account
   I want to see the added account
 
 Scenario: adding an account
+	When I log in as "melsatar@hotmail.com" with "12345678"
         Given I am on the homepage
         And I follow "New Account"
 	Then I should be on the new account page
@@ -14,4 +15,4 @@ Scenario: adding an account
         And I fill in "account_a_amount" with "1000"
         When I press "Create Account"
         Then I should see "Account was successfully created."
-        And I should be on the show account page
+   

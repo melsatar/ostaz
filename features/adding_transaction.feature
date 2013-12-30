@@ -5,6 +5,7 @@ Feature: adding a transaction
   I want to see the added transaction
 
 Scenario: adding a transaction
+	Given I am a new, authenticated user
         Given I am on the homepage
         Given the following accounts
 	| a_name             | a_type    | a_amount |
@@ -18,7 +19,7 @@ Scenario: adding a transaction
 	| Project Expenses   |	Expense	 | 0.0	    |
 	| Capital	     |	Equity	 | 50000.0  |	
 	| Revenue	     |	Equity	 | 0.0      |
-
+	
         And I follow "New Transaction"
 	Then I should be on the new transaction page
 	Then I select "Bank" from "transaction_from_account_id"

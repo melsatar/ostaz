@@ -5,6 +5,7 @@ Feature: adding an account
   I want to see the added account
 
 Scenario: adding an account
+	Given I am a new, authenticated user
         Given I am on the homepage
         And I follow "New Account"
 	Then I should be on the new account page
