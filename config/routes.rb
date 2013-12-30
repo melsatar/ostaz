@@ -1,4 +1,5 @@
 Project::Application.routes.draw do
+  devise_for :users
   resources :transactions #do
   #member do
   #get 'search'

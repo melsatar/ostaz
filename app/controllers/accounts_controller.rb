@@ -1,5 +1,7 @@
 class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, :except => [:some_action_without_auth]
+
 
   def index
     @accounts = Account.all
