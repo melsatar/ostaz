@@ -8,10 +8,13 @@ gem 'rails', '4.0.1'
 group :development, :test do
   gem 'sqlite3'
   gem 'ruby-debug19'
+  #gem 'debugger'
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails'
+  gem 'the_role'
+  gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
   
 end
 
