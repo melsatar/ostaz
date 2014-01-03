@@ -1,17 +1,17 @@
 class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :edit, :update, :destroy]
-  
-  before_filter :login_required, :except => [:index, :show]
+  before_filter :authenticate_user!
+  #before_filter :login_required, :except => [:index, :show]
   before_filter :role_required,  :except => [:index, :show]
   
-  before_filter :find_page,      :only   => [:edit, :update, :destroy]
-  before_filter :owner_required, :only   => [:edit, :update, :destroy]
+  #before_filter :find_page,      :only   => [:edit, :update, :destroy]
+  #before_filter :owner_required, :only   => [:edit, :update, :destroy]
   
-  before_action :login_required, except: [:index, :show]
-  before_action :role_required,  except: [:index, :show]
+  #before_action :login_required, except: [:index, :show]
+  #before_action :role_required,  except: [:index, :show]
 
-  before_action :set_page,       only: [:edit, :update, :destroy]
-  before_action :owner_required, only: [:edit, :update, :destroy]
+  #before_action :set_page,       only: [:edit, :update, :destroy]
+  #before_action :owner_required, only: [:edit, :update, :destroy]
 
 
 
