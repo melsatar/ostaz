@@ -1,6 +1,7 @@
 <h1>Accounts Balance</h1>
 
 <%=form_tag accounts_path, :method => 'get' do %>
+
   <p>Account Name
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :a_name => nil %>
@@ -34,7 +35,48 @@
 </table>
 
 <br>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
     
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Account');
+        data.addColumn('number', 'Amount');
+        <% @accounts.each do |account| %>
+        	data.addRow(["<%= account.a_name %>", <%= account.a_amount %>]);
+	<% end %>
+        
+
+        // Set chart options
+        var options = {'title':'Accounts balance distribution',
+                       'width':600,
+                       'height':500,
+			is3D: true};
+        
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+
 <p>
 <%= link_to 'New Account', new_account_path %>
 </p>
@@ -43,4 +85,7 @@
 </p>
 <p>
 <%= link_to 'List all Transaction', transactions_path %>
+</p>
+<p>
+<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
 </p>

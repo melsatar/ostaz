@@ -1,5 +1,6 @@
 Project::Application.routes.draw do
   devise_for :users
+  #devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
   resources :transactions #do
   #member do
   #get 'search'
@@ -13,7 +14,7 @@ Project::Application.routes.draw do
   resources :accounts
 
   root :to=> 'accounts#index'
-  
+    
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

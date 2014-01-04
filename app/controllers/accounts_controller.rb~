@@ -1,8 +1,15 @@
 class AccountsController < ApplicationController
+  include TheRole
+  include Devise
   before_action :set_account, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
+  before_action :role_required,  except: [:index]
 
-  def index
-    @account = Account.all
+  #before_action :set_page,       only: [:edit, :update, :destroy]
+  #before_action :owner_required, only: [:edit, :update, :destroy]
+
+  def index 
+    @accounts = Account.all
     @sort = nil
     if params.has_key?(:sort)
       @sort = params[:sort]
@@ -19,6 +26,7 @@ class AccountsController < ApplicationController
     if params.has_key?(:search)
 	@accounts = Account.search(params[:search])
     end
+
 
   end
 
