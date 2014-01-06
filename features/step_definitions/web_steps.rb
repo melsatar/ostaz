@@ -56,16 +56,25 @@ When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
 end
 
-Given /^I am a new, authenticated user$/ do
+
+Given (/^I am a new, authenticated user$/) do
   email = 'testing@man.net'
   password = 'secretpass'
   User.new(:email => email, :password => password, :password_confirmation => password).save!
+  visit '/users/sign_in'
+  fill_in "user_email", :with => email
+  fill_in "user_password", :with => password
+  click_button "Sign in"
 
+end
+
+Given(/^I am an authenticated user, username is "(.*?)" and password is "(.*?)"$/) do |email, password|
   visit '/users/sign_in'
   fill_in "user_email", :with => email
   fill_in "user_password", :with => password
   click_button "Sign in"
 end
+
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)

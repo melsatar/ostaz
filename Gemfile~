@@ -11,12 +11,11 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
-  gem 'rspec-rails'
-  
+  gem 'rspec-rails'  
 end
 
 group :test do
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'webrat'
   gem 'mechanize'
@@ -28,6 +27,10 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+gem 'the_role'
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
+
 gem 'simplecov', :require => false, :group => :test
 gem 'devise'
 gem 'cancan'

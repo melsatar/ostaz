@@ -13039,3 +13039,2418 @@ Processing by TransactionsController#new as HTML
   Rendered transactions/_form.html.erb (46.2ms)
   Rendered transactions/new.html.erb within layouts/application (47.3ms)
 Completed 200 OK in 77ms (Views: 68.1ms | ActiveRecord: 1.0ms)
+  [1m[36m (561.6ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (337.6ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (343.4ms)[0m  [1mDROP TABLE "roles"[0m
+  [1m[35m (228.9ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (240.8ms)[0m  [1mDROP TABLE "transactions"[0m
+  [1m[35m (224.0ms)[0m  CREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) 
+  [1m[36m (460.9ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (249.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (240.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (320.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (55.3ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Mon, 06 Jan 2014 19:08:02 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:08:02 UTC +00:00]]
+  [1m[36m (245.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Mon, 06 Jan 2014 19:08:02 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:08:02 UTC +00:00]]
+  [1m[35m (195.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Mon, 06 Jan 2014 19:08:02 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:08:02 UTC +00:00]]
+  [1m[36m (245.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Mon, 06 Jan 2014 19:08:03 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:08:03 UTC +00:00]]
+  [1m[35m (354.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Mon, 06 Jan 2014 19:08:03 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:08:03 UTC +00:00]]
+  [1m[36m (239.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Dept"], ["a_type", "Liability"], ["created_at", Mon, 06 Jan 2014 19:08:03 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:08:03 UTC +00:00]]
+  [1m[35m (179.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Mon, 06 Jan 2014 19:08:03 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:08:03 UTC +00:00]]
+  [1m[36m (369.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Mon, 06 Jan 2014 19:08:04 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:08:04 UTC +00:00]]
+  [1m[35m (181.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Mon, 06 Jan 2014 19:08:04 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:08:04 UTC +00:00]]
+  [1m[36m (173.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Mon, 06 Jan 2014 19:08:04 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:08:04 UTC +00:00]]
+  [1m[35m (171.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.2ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'admin' LIMIT 1
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'admin' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 06 Jan 2014 19:08:04 UTC +00:00], ["description", "Manage Every thing"], ["name", "admin"], ["the_role", "{\"system\":{\"administrator\":true}}"], ["title", "admin"], ["updated_at", Mon, 06 Jan 2014 19:08:04 UTC +00:00]]
+  [1m[36m (265.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'Accountant' LIMIT 1[0m
+  [1m[35mRole Exists (0.1ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Accountant' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 06 Jan 2014 19:08:05 UTC +00:00], ["description", "Accountant authorization"], ["name", "accountant"], ["the_role", "{\"accounts\":{\"index\":true,\"edit\":true,\"show\":true,\"new\":true,\"create\":true}}"], ["title", "Accountant"], ["updated_at", Mon, 06 Jan 2014 19:08:05 UTC +00:00]]
+  [1m[35m (170.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.1ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'Data_Entry' LIMIT 1
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Data_Entry' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 06 Jan 2014 19:08:05 UTC +00:00], ["description", "Data Entry authorization"], ["name", "data_entry"], ["the_role", "{\"accounts\":{\"index\":true,\"edit\":false,\"show\":true,\"new\":false,\"create\":false},\"transactions\":{\"index\":true,\"edit\":false,\"show\":true,\"new\":false,\"create\":false}}"], ["title", "Data_Entry"], ["updated_at", Mon, 06 Jan 2014 19:08:05 UTC +00:00]]
+  [1m[36m (164.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@ostaz.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Mon, 06 Jan 2014 19:08:05 UTC +00:00], ["email", "admin@ostaz.com"], ["encrypted_password", "$2a$10$lWjD/t6lucC/vQYJUjdSv.PeWiklTx8ktERHfex4h9MxC1fPrVVPC"], ["updated_at", Mon, 06 Jan 2014 19:08:05 UTC +00:00]]
+  [1m[36m (275.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."name" = 'admin' ORDER BY "roles"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "role_id" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["role_id", 1], ["updated_at", Mon, 06 Jan 2014 19:08:06 UTC +00:00]]
+  [1m[35m (220.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'accountant@ostaz.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 06 Jan 2014 19:08:06 UTC +00:00], ["email", "accountant@ostaz.com"], ["encrypted_password", "$2a$10$s71dNKlI4EW8EEkAymcADOrfEnWUrOGW7BmBcvJv6XCFJDMRkV0S2"], ["updated_at", Mon, 06 Jan 2014 19:08:06 UTC +00:00]]
+  [1m[35m (162.3ms)[0m  commit transaction
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'accountant@ostaz.com' LIMIT 1[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'Accountant' ORDER BY "roles"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'entry@ostaz.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 06 Jan 2014 19:08:06 UTC +00:00], ["email", "entry@ostaz.com"], ["encrypted_password", "$2a$10$i5ceMJ3paQem.JAYs3OuBetbIxRZafP7GiIsJeqm/UkfPvgGQ5L9q"], ["updated_at", Mon, 06 Jan 2014 19:08:06 UTC +00:00]]
+  [1m[35m (179.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'entry@ostaz.com' LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'Data_Entry' ORDER BY "roles"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (1089.5ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (280.8ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (239.4ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (383.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (223.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (465.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (233.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (240.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (273.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (193.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (191.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (191.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (231.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (184.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (1250.8ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (357.3ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (499.5ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (333.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (315.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (265.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (397.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (358.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (283.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (358.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (266.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (258.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (250.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (275.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (391.3ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (374.4ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (424.0ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (379.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (417.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (339.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (266.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (265.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (399.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (296.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (361.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (283.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (283.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (344.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-06 21:25:29 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 60ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (89.6ms)
+Completed 200 OK in 343ms (Views: 339.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.8ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.9ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:30 +0200
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-06 21:25:46 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FLXTOTf/qrxk0q4RGh7601jdJ1+4FdcGuEQN0QPkm4Q=", "user"=>{"email"=>"accountant@ostaz.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'accountant@ostaz.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[36mSQL (6.1ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["last_sign_in_at", Mon, 06 Jan 2014 19:25:46 UTC +00:00], ["current_sign_in_at", Mon, 06 Jan 2014 19:25:46 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Mon, 06 Jan 2014 19:25:46 UTC +00:00]]
+  [1m[35m (453.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 605ms (ActiveRecord: 460.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (25.0ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 21:25:47 +0200
+
+
+Started GET "/admin/roles" for 127.0.0.1 at 2014-01-06 21:25:59 +0200
+Processing by Admin::RolesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered text template (0.0ms)
+Filter chain halted as :role_required rendered or redirected
+Completed 200 OK in 136ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2014-01-06 21:35:05 +0200
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered text template (0.0ms)
+Filter chain halted as :role_required rendered or redirected
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2014-01-06 21:35:05 +0200
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered text template (0.0ms)
+Filter chain halted as :role_required rendered or redirected
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2014-01-06 21:35:08 +0200
+Processing by TransactionsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered text template (0.0ms)
+Filter chain halted as :role_required rendered or redirected
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2014-01-06 21:35:08 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered text template (0.0ms)
+Filter chain halted as :role_required rendered or redirected
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (21.8ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:12 +0200
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2014-01-06 21:35:16 +0200
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered text template (0.0ms)
+Filter chain halted as :role_required rendered or redirected
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/new" for 127.0.0.1 at 2014-01-06 21:35:16 +0200
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered text template (0.0ms)
+Filter chain halted as :role_required rendered or redirected
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-01-06 21:35:22 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IPhOsdn38duU+k+0ksrORsJjLEog5Nb/OUR56pEj6zg="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 60ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:23 +0200
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-06 21:35:31 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"95cdH38Ibv7qaP47Xx7iY+IBbyMJW5yigwH00hys1pk=", "user"=>{"email"=>"admin@ostaz.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@ostaz.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Mon, 06 Jan 2014 19:35:31 UTC +00:00], ["current_sign_in_at", Mon, 06 Jan 2014 19:35:31 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Mon, 06 Jan 2014 19:35:31 UTC +00:00]]
+  [1m[35m (336.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 419ms (ActiveRecord: 337.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:32 +0200
+
+
+Started GET "/admin/roles" for 127.0.0.1 at 2014-01-06 21:35:42 +0200
+Processing by Admin::RolesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" ORDER BY created_at ASC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?  [["role_id", 1]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915326507760 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 2]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915326507760 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?  [["role_id", 3]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915326507760 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  Rendered admin/roles/_sidebar.html.haml (198.2ms)
+  Rendered admin/roles/_role.html.haml (44.7ms)
+  Rendered admin/roles/index.haml within layouts/application (244.7ms)
+Completed 200 OK in 677ms (Views: 272.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (37.4ms)
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-01-06 21:35:43 +0200
+
+
+Started GET "/admin/roles/2/edit" for 127.0.0.1 at 2014-01-06 21:35:46 +0200
+Processing by Admin::RolesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915222978220 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?  [["role_id", 2]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915222978220 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 3]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915222978220 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  Rendered admin/roles/_sidebar.html.haml (8.2ms)
+  Rendered admin/roles/_role.html.haml (40.1ms)
+  Rendered admin/roles/edit.html.haml within layouts/application (50.3ms)
+Completed 200 OK in 111ms (Views: 107.3ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/admin/roles/2/sections/accounts/rule_off?name=index" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+Processing by Admin::RoleSectionsController#rule_off as HTML
+  Parameters: {"authenticity_token"=>"xqvSzdHkxrQ9lrJZED/F0BmPs0DuF7gTdgC8hRmkark=", "name"=>"index", "role_id"=>"2", "id"=>"accounts"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.2ms)[0m  SELECT 1 AS one FROM "roles" WHERE ("roles"."name" = 'accountant' AND "roles"."id" != 2) LIMIT 1
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE ("roles"."title" = 'Accountant' AND "roles"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "roles" SET "the_role" = ?, "updated_at" = ? WHERE "roles"."id" = 2  [["the_role", "{\"accounts\":{\"index\":false,\"edit\":true,\"show\":true,\"new\":true,\"create\":true}}"], ["updated_at", Mon, 06 Jan 2014 19:35:55 UTC +00:00]]
+  [1m[36m (319.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/roles/2/edit
+Completed 302 Found in 340ms (ActiveRecord: 320.1ms)
+
+
+Started GET "/admin/roles/2/edit" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+Processing by Admin::RolesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?  [["role_id", 1]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915326507760 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 2]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915326507760 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?  [["role_id", 3]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915326507760 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  Rendered admin/roles/_sidebar.html.haml (4.6ms)
+  Rendered admin/roles/_role.html.haml (7.2ms)
+  Rendered admin/roles/edit.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 63ms (Views: 29.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (37.2ms)
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:55 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:56 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:56 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:56 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:56 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:56 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 21:35:56 +0200
+
+
+Started PUT "/admin/roles/2/sections/accounts/rule_on?name=index" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+Processing by Admin::RoleSectionsController#rule_on as HTML
+  Parameters: {"authenticity_token"=>"xqvSzdHkxrQ9lrJZED/F0BmPs0DuF7gTdgC8hRmkark=", "name"=>"index", "role_id"=>"2", "id"=>"accounts"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE ("roles"."name" = 'accountant' AND "roles"."id" != 2) LIMIT 1[0m
+  [1m[35mRole Exists (0.1ms)[0m  SELECT 1 AS one FROM "roles" WHERE ("roles"."title" = 'Accountant' AND "roles"."id" != 2) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "roles" SET "the_role" = ?, "updated_at" = ? WHERE "roles"."id" = 2[0m  [["the_role", "{\"accounts\":{\"index\":true,\"edit\":true,\"show\":true,\"new\":true,\"create\":true}}"], ["updated_at", Mon, 06 Jan 2014 19:36:00 UTC +00:00]]
+  [1m[35m (272.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/roles/2/edit
+Completed 302 Found in 285ms (ActiveRecord: 273.3ms)
+
+
+Started GET "/admin/roles/2/edit" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+Processing by Admin::RolesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mRole Load (0.6ms)[0m  SELECT "roles".* FROM "roles"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915326507760 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?  [["role_id", 2]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915326507760 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 3]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915326507760 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  Rendered admin/roles/_sidebar.html.haml (12.4ms)
+  Rendered admin/roles/_role.html.haml (32.8ms)
+  Rendered admin/roles/edit.html.haml within layouts/application (47.4ms)
+Completed 200 OK in 113ms (Views: 105.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (21.8ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:00 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 21:36:01 +0200
+
+
+Started GET "/admin/roles/3/edit" for 127.0.0.1 at 2014-01-06 21:36:16 +0200
+Processing by Admin::RolesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRole Load (0.0ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT "roles".* FROM "roles"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?  [["role_id", 1]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915222978220 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 2]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915222978220 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?  [["role_id", 3]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915222978220 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  Rendered admin/roles/_sidebar.html.haml (7.4ms)
+  Rendered admin/roles/_role.html.haml (11.5ms)
+  Rendered admin/roles/edit.html.haml within layouts/application (21.6ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/roles/2/edit" for 127.0.0.1 at 2014-01-06 21:36:24 +0200
+Processing by Admin::RolesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915222978220 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?  [["role_id", 2]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915222978220 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 3]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block (2 levels) in _app_views_admin_roles__sidebar_html_haml___4218591984455350268_69915222978220 at /home/melsatar/Documents/Project/app/views/admin/roles/_sidebar.html.haml:15)
+  Rendered admin/roles/_sidebar.html.haml (4.8ms)
+  Rendered admin/roles/_role.html.haml (47.4ms)
+  Rendered admin/roles/edit.html.haml within layouts/application (53.4ms)
+Completed 200 OK in 74ms (Views: 69.1ms | ActiveRecord: 0.8ms)
+  [1m[36m (232.2ms)[0m  [1mDROP TABLE "accounts"[0m
+  [1m[35m (191.8ms)[0m  CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (205.9ms)[0m  [1mDROP TABLE "roles"[0m
+  [1m[35m (190.9ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (247.5ms)[0m  [1mDROP TABLE "transactions"[0m
+  [1m[35m (199.4ms)[0m  CREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) 
+  [1m[36m (214.7ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (171.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (215.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (298.5ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (28.6ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Mon, 06 Jan 2014 19:39:45 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:39:45 UTC +00:00]]
+  [1m[36m (182.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Mon, 06 Jan 2014 19:39:45 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:39:45 UTC +00:00]]
+  [1m[35m (211.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Mon, 06 Jan 2014 19:39:45 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:39:45 UTC +00:00]]
+  [1m[36m (463.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Mon, 06 Jan 2014 19:39:46 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:39:46 UTC +00:00]]
+  [1m[35m (203.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Mon, 06 Jan 2014 19:39:46 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:39:46 UTC +00:00]]
+  [1m[36m (220.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Dept"], ["a_type", "Liability"], ["created_at", Mon, 06 Jan 2014 19:39:46 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:39:46 UTC +00:00]]
+  [1m[35m (212.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Mon, 06 Jan 2014 19:39:46 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:39:46 UTC +00:00]]
+  [1m[36m (221.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Mon, 06 Jan 2014 19:39:47 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:39:47 UTC +00:00]]
+  [1m[35m (265.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Mon, 06 Jan 2014 19:39:47 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:39:47 UTC +00:00]]
+  [1m[36m (217.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Mon, 06 Jan 2014 19:39:47 UTC +00:00], ["updated_at", Mon, 06 Jan 2014 19:39:47 UTC +00:00]]
+  [1m[35m (212.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.1ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'admin' LIMIT 1
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'admin' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 06 Jan 2014 19:39:47 UTC +00:00], ["description", "Manage Every thing"], ["name", "admin"], ["the_role", "{\"system\":{\"administrator\":true}}"], ["title", "admin"], ["updated_at", Mon, 06 Jan 2014 19:39:47 UTC +00:00]]
+  [1m[36m (289.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'Accountant' LIMIT 1[0m
+  [1m[35mRole Exists (0.2ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Accountant' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 06 Jan 2014 19:39:48 UTC +00:00], ["description", "Accountant authorization"], ["name", "accountant"], ["the_role", "{\"accounts\":{\"index\":true,\"edit\":true,\"show\":true,\"new\":true,\"create\":true}}"], ["title", "Accountant"], ["updated_at", Mon, 06 Jan 2014 19:39:48 UTC +00:00]]
+  [1m[35m (322.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.3ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'Data_Entry' LIMIT 1
+  [1m[36mRole Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Data_Entry' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 06 Jan 2014 19:39:48 UTC +00:00], ["description", "Data Entry authorization"], ["name", "data_entry"], ["the_role", "{\"accounts\":{\"index\":true,\"edit\":false,\"show\":true,\"new\":false,\"create\":false},\"transactions\":{\"index\":true,\"edit\":false,\"show\":true,\"new\":false,\"create\":false}}"], ["title", "Data_Entry"], ["updated_at", Mon, 06 Jan 2014 19:39:48 UTC +00:00]]
+  [1m[36m (217.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@ostaz.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Mon, 06 Jan 2014 19:39:48 UTC +00:00], ["email", "admin@ostaz.com"], ["encrypted_password", "$2a$10$Fo1STiCb.CVd0Opo7eaQu.SOzQW6gyCJu3spcmnSt5cx/caxQiDFG"], ["updated_at", Mon, 06 Jan 2014 19:39:48 UTC +00:00]]
+  [1m[36m (225.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."name" = 'admin' ORDER BY "roles"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "role_id" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["role_id", 1], ["updated_at", Mon, 06 Jan 2014 19:39:49 UTC +00:00]]
+  [1m[35m (219.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'accountant@ostaz.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 06 Jan 2014 19:39:49 UTC +00:00], ["email", "accountant@ostaz.com"], ["encrypted_password", "$2a$10$Lj8IS.jFO33xyVFQdagReOFTf1XeTNMD.zI0dxOyeXkaOztKuOQd."], ["updated_at", Mon, 06 Jan 2014 19:39:49 UTC +00:00]]
+  [1m[35m (186.7ms)[0m  commit transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'accountant@ostaz.com' LIMIT 1[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'Accountant' ORDER BY "roles"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'entry@ostaz.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 06 Jan 2014 19:39:49 UTC +00:00], ["email", "entry@ostaz.com"], ["encrypted_password", "$2a$10$4GqZY/TBMJDpFyMYbqR.tOwck2BVpvfS0P1n2rfJhIqNM4RWfxWl2"], ["updated_at", Mon, 06 Jan 2014 19:39:49 UTC +00:00]]
+  [1m[35m (296.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'entry@ostaz.com' LIMIT 1[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'Data_Entry' ORDER BY "roles"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[36m (220.8ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (232.2ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (215.1ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (282.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (223.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (224.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (222.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (224.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (182.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (182.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (182.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (224.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (191.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "roles"[0m
+  [1m[36m (382.8ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (214.2ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (214.0ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (330.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (232.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (223.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (223.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (223.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (274.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (188.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (191.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (191.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (191.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (271.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (224.0ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (223.1ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (224.5ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (224.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (231.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (223.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (230.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (225.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (188.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (182.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (393.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (380.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (174.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (174.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (229.7ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (214.2ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (214.1ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (213.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (216.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (215.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (255.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (215.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (180.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (174.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (183.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (276.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (189.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (291.5ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (222.7ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (224.2ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (229.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (331.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (240.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (225.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (224.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (191.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (191.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (273.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (184.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (191.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (274.5ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (230.7ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (231.1ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (224.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (273.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (231.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (233.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (233.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (274.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (189.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (183.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (182.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (182.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (268.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (245.2ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (222.4ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (330.9ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (228.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (231.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (231.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (263.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (282.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (188.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (190.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (183.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (183.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (234.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (181.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-06 22:44:20 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccountsController#index as HTML
+Completed 401 Unauthorized in 24ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-06 22:44:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (64.6ms)
+Completed 200 OK in 237ms (Views: 224.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (31.4ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (55.1ms)
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:21 +0200
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-06 22:44:23 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Sw/3NB+yc/AZD7/n+zz7kVF7OSk+QVrf/95yvEq2o4=", "user"=>{"email"=>"admin@ostaz.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin@ostaz.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `last_sign_in_ip`
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[35mSQL (37.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Mon, 06 Jan 2014 20:44:23 UTC +00:00], ["current_sign_in_at", Mon, 06 Jan 2014 20:44:23 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Mon, 06 Jan 2014 20:44:23 UTC +00:00]]
+  [1m[36m (410.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 798ms (ActiveRecord: 448.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 39ms (Views: 29.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (49.4ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:24 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 27ms (Views: 21.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (23.8ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 22:44:45 +0200
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2014-01-06 22:44:48 +0200
+Processing by TransactionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered transactions/_form.html.erb (48.3ms)
+  Rendered transactions/new.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 235ms (Views: 66.7ms | ActiveRecord: 1.1ms)
+  [1m[36m (217.8ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (230.6ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (231.3ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (381.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (241.7ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (231.6ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (236.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (240.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (367.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (191.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (239.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (192.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (191.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (219.0ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (231.6ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (222.8ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (230.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (332.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (231.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (230.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (240.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (188.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (226.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (189.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (191.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (182.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (174.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (202.8ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (239.3ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (231.0ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (238.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (232.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (231.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (230.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (223.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (186.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (182.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (270.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (187.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (191.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+
+
+Started GET "/accounts/1/edit" for 127.0.0.1 at 2014-01-06 22:53:40 +0200
+Processing by AccountsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (0.5ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/_form.html.erb (40.0ms)
+  Rendered accounts/edit.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 73ms (Views: 64.1ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/accounts/1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+Processing by AccountsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PxPprH8GPxrECSM6iVjRrDQpzkAIy1MKiksajKXSz8k=", "account"=>{"a_name"=>"Bank", "a_type"=>"Asset", "a_amount"=>"50000.0"}, "commit"=>"Update Account", "id"=>"1"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/accounts/1
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 20.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 22:54:46 +0200
+  [1m[36m (220.5ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (224.4ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (231.1ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (230.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (340.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (232.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (272.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (224.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (187.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (199.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (235.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (196.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (191.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (219.2ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (230.8ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (222.4ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (221.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (223.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (223.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (223.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (231.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (342.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (191.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (191.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (231.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (226.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (246.6ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (189.4ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (331.1ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (206.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (257.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (215.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (222.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (216.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (174.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (215.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (175.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (174.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (174.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (174.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+
+
+Started GET "/accounts" for 127.0.0.1 at 2014-01-06 22:58:16 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 55ms (Views: 50.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/accounts/1/edit" for 127.0.0.1 at 2014-01-06 22:58:19 +0200
+Processing by AccountsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered accounts/_form.html.erb (2.2ms)
+  Rendered accounts/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 64ms (Views: 60.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (259.2ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (222.4ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (223.4ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (329.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (215.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (223.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (225.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (223.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (274.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (186.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (191.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (182.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (183.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (271.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (214.2ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (222.8ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (214.1ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (223.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (265.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (223.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (235.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (224.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (265.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (183.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (182.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (183.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (182.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (266.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (373.1ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (239.2ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (231.0ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (234.9ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (240.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (248.6ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (235.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (224.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (178.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (191.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (191.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (228.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (187.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (217.3ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (230.0ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (222.6ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (226.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (223.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (340.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (225.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (223.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (183.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (183.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (191.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (182.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (231.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (184.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-06 23:11:46 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/transactions.css?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/javascripts/defaults.js" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/melsatar/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/melsatar/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.7ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/accounts.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/transactions.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+
+
+Started GET "/assets/the_role_editinplace.js?body=1" for 127.0.0.1 at 2014-01-06 23:11:47 +0200
+  [1m[36m (274.7ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (230.8ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (231.2ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (272.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (232.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (231.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (231.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (315.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (182.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (299.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (183.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (274.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (191.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (230.6ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (239.3ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (230.8ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (228.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (281.8ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (223.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (206.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (207.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (248.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (180.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (191.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (183.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (183.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (263.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (268.5ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (233.0ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (239.3ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (224.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (390.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (231.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (230.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (224.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (223.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (185.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (182.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (182.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (182.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (222.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (235.5ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (239.3ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (239.2ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (239.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (223.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (232.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (272.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (240.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (192.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (191.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (273.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (184.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (191.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m
+  [1m[36m (215.3ms)[0m  [1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "a_name" varchar(255), "a_type" varchar(255), "a_amount" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (339.1ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) NOT NULL, "title" varchar(255) NOT NULL, "description" text NOT NULL, "the_role" text NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (222.9ms)[0m  [1mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_account_id" integer, "to_account_id" integer, "t_amount" float, "t_date" date, "t_desc" text, "created_at" datetime, "updated_at" datetime, "t_attac_file_name" varchar(255), "t_attac_content_type" varchar(255), "t_attac_file_size" integer, "t_attac_updated_at" datetime) [0m
+  [1m[35m (225.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "role_id" integer) 
+  [1m[36m (223.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (223.5ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (222.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (232.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (185.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101902')
+  [1m[36m (262.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131227010019')[0m
+  [1m[35m (186.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140102101735')
+  [1m[36m (191.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131230014332')[0m
+  [1m[35m (191.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207140638')
+  [1m[36m (191.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207140703')[0m

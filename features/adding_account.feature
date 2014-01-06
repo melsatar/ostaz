@@ -5,7 +5,7 @@ Feature: adding an account
   I want to see the added account
 
 Scenario: adding an account
-	Given I am a new, authenticated user
+	Given I am an authenticated user, username is "admin@ostaz.com" and password is "12345678"
         Given I am on the homepage
         And I follow "New Account"
 	Then I should be on the new account page
@@ -16,3 +16,10 @@ Scenario: adding an account
         When I press "Create Account"
         Then I should see "Account was successfully created."
    
+
+Scenario: adding an account without assigning role
+	Given I am a new, authenticated user
+        Given I am on the homepage
+        And I follow "New Account"
+	Then I should be on the new account page
+	Then I should see "access_denied: requires an role"

@@ -5,7 +5,7 @@ Feature: adding a transaction
   I want to see the added transaction
 
 Scenario: adding a transaction
-	When I log in as "melsatar@hotmail.com" with "12345678"
+	Given I am an authenticated user, username is "admin@ostaz.com" and password is "12345678"
         Given I am on the homepage
         Given the following accounts
 	| a_name             | a_type    | a_amount |

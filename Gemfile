@@ -8,14 +8,10 @@ gem 'rails', '4.0.1'
 group :development, :test do
   gem 'sqlite3'
   gem 'ruby-debug19'
-  #gem 'debugger'
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
-  gem 'rspec-rails'
-  gem 'the_role'
-  gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
-  
+  gem 'rspec-rails'  
 end
 
 group :test do
@@ -31,6 +27,9 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
+gem 'the_role'
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem 'simplecov', :require => false, :group => :test
 gem 'devise'
 gem 'cancan'
