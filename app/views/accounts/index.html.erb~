@@ -1,9 +1,9 @@
 <h1>Accounts Balance</h1>
-
+<p>
 <% if current_user.has_role? :system, :administrator %>
   <%= link_to 'Admin Page', admin_roles_path  %>
 <% end %>
-
+</p>
 <%=form_tag accounts_path, :method => 'get' do %>
 
   <p>Account Name

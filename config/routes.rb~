@@ -1,6 +1,6 @@
 Project::Application.routes.draw do
-  #devise_for :users
-  devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
+  devise_for :users
+  #devise_for :users do get '/users/sign_out' => 'devise/sessions#destroy' end
   resources :transactions #do
   #member do
   #get 'search'
@@ -8,6 +8,7 @@ Project::Application.routes.draw do
   #end
 
   get '/search' => 'pages#search'
+  get '/assign' => 'pages#assign'
   #connect '/transactions/search' => 'transactions#search', :as => :search_transactions
   
 

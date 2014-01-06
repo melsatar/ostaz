@@ -2,6 +2,7 @@
 <p>
 <% if current_user.has_role? :system, :administrator %>
   <%= link_to 'Admin Page', admin_roles_path  %>
+  <%= link_to 'Assign User Role', assign_path  %>
 <% end %>
 </p>
 <%=form_tag accounts_path, :method => 'get' do %>

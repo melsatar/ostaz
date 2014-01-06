@@ -35,7 +35,7 @@ user1.password_confirmation = "12345678"
 user1.save!
 
 accountant = User.find_by :email => "accountant@ostaz.com"
-accountant.update( role: Role.with_name(:Accountant) )
+accountant.update( role: Role.with_name(:accountant))
 
 user2 = User.new
 user2.email = "entry@ostaz.com"
@@ -44,7 +44,7 @@ user2.password_confirmation = "12345678"
 user2.save!
 
 entry = User.find_by :email => "entry@ostaz.com"
-accountant.update( role: Role.with_name(:Data_Entry) )
+entry.update( role: Role.with_name(:data_entry) )
 
 
 

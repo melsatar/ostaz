@@ -11036,3 +11036,5 @@ Processing by TransactionsController#show as HTML
   Rendered transactions/show.html.erb within layouts/application (2.7ms)
 Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.5ms)
   [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
