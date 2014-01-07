@@ -1,0 +1,38 @@
+<h1>User Management</h1>
+<%=form_tag others_assign_path, :method => 'get' do %>
+  <p>
+    User
+    <%= select_tag :user, options_from_collection_for_select(@users,:id,:email), :include_blank => true, :class => 'dropdown-toggle' %>
+    Role
+    <%= select_tag :role, options_from_collection_for_select(@roles,:id,:name), :include_blank => true, :class => 'dropdown-toggle' %>
+    <p>
+    <%= submit_tag "Assign", :name => nil, :class => 'btn btn-primary' %>
+    </p>
+  </p>
+<% end %>
+
+<p>
+</p>
+<p>
+</p>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>User Email</th>
+      <th>Current Role</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+	<td><%= user.email %></td>
+        <td><% Role.where(:id => user.role_id).each do |role| %> 
+             <%= role.name%>
+            <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

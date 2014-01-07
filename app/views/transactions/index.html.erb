@@ -1,0 +1,74 @@
+<h1>Transactions List</h1>
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th><%=link_to 'From Account', sort: :fname %></th>
+      <th><%=link_to 'To Account', sort: :tname %></th>
+      <th><%=link_to 'Transaction Amount', sort: :amount %></th>
+      <th><%=link_to 'Transaction Date', sort: :date %></th>
+      <th>Transaction Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><% Account.where(:id => transaction.from_account_id).each do |account| %> 
+             <%= account.a_name%>
+            <% end %>
+        </td>
+        <td><% Account.where(:id => transaction.to_account_id).each do |account| %> 
+             <%= account.a_name%>
+            <% end %>
+        </td>
+        <td><%= transaction.t_amount %></td>
+        <td><%= transaction.t_date %></td>
+        <td><%= transaction.t_desc %></td>
+        <td><%= link_to 'Show', transaction %></td>
+        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+        <td><%#= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transaction', new_transaction_path %>
+<p>
+<%= link_to 'Search Transactions', others_search_path, method: :get %>
+</p>
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Date');
+        data.addColumn('number', 'Amount');
+	<% @amount_by_day = Transaction.group(:t_date).select("t_date AS transaction_date", "sum(t_amount) as amount_sum") %>
+
+        <% @amount_by_day.each do |transactions| %>
+        	data.addRow(["<%= transactions.transaction_date %>", <%= transactions.amount_sum %>]);
+	<% end %>
+
+        var options = {
+          title: 'Amount of transactions per day',
+          vAxis: {title: 'Day',  titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

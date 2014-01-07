@@ -1,0 +1,57 @@
+<h1>Transactions Search</h1>
+<%=form_tag search_path, :method => 'get' do %>
+  <p>
+    Date
+    <%= date_field_tag :t_date %>
+    Amount
+    <%= text_field_tag :amount %>
+    From Account
+    <%= select_tag :f_account, options_from_collection_for_select(@accounts,:id,:a_name), :include_blank => true %>
+    To Account
+    <%= select_tag :t_account, options_from_collection_for_select(@accounts,:id,:a_name), :include_blank => true %>
+    <p>
+    <%= submit_tag "Search", :name => nil %>
+    </p>
+  </p>
+<% end %>
+
+<p>
+<%= link_to 'Home Page', accounts_path %>
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>From Account</th>
+      <th>To Account</th>
+      <th>Transaction Amount</th>
+      <th>Transaction Date</th>
+      <th>Transaction Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><% Account.where(:id => transaction.from_account_id).each do |account| %> 
+             <%= account.a_name%>
+            <% end %>
+        </td>
+        <td><% Account.where(:id => transaction.to_account_id).each do |account| %> 
+             <%= account.a_name%>
+            <% end %>
+        </td>
+        <td><%= transaction.t_amount %></td>
+        <td><%= transaction.t_date %></td>
+        <td><%= transaction.t_desc %></td>
+        <td><%= link_to 'Show', transaction %></td>
+        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+        <td><%#= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

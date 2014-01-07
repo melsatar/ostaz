@@ -1,0 +1,15 @@
+class ApplicationController < ActionController::Base
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  include TheRole::Controller
+  protect_from_forgery
+   
+  def access_denied
+    flash[:error] = "the user does not have the privaliage to access this page"
+    redirect_to(:back)
+    #render :text => 'access_denied: requires an role' and return
+  end
+
+  alias_method :login_required, :authenticate_user!
+  alias_method :role_access_denied, :access_denied
+end
