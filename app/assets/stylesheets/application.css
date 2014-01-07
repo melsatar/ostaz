@@ -208,7 +208,7 @@ textarea {
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 2;
 }
 
 @media print {
@@ -282,7 +282,7 @@ table {
   }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #ddd !important;
+    border: 2px solid #ddd !important;
   }
 }
 
@@ -396,7 +396,7 @@ h6,
 .h6 {
   font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 2.5;
   color: inherit;
 }
 
@@ -463,7 +463,7 @@ h6 .small {
 
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 40px;
 }
 
 h2,
@@ -1735,10 +1735,10 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 8px;
-  line-height: 1.428571429;
+  padding: 15px;
+  line-height: 2.428571429;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 2px solid #dddddd;
 }
 
 .table > thead > tr > th {
@@ -1752,7 +1752,7 @@ th {
 .table > caption + thead > tr:first-child > td,
 .table > colgroup + thead > tr:first-child > td,
 .table > thead:first-child > tr:first-child > td {
-  border-top: 0;
+  border-top: 2;
 }
 
 .table > tbody + tbody {
@@ -1769,7 +1769,7 @@ th {
 .table-condensed > thead > tr > td,
 .table-condensed > tbody > tr > td,
 .table-condensed > tfoot > tr > td {
-  padding: 5px;
+  padding: 8px;
 }
 
 .table-bordered {
@@ -5617,14 +5617,14 @@ a.thumbnail.active {
 }
 
 .alert {
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
+  padding: 60px;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
 }
 
 .alert h4 {
-  margin-top: 0;
+  margin-top: 2;
   color: inherit;
 }
 
@@ -5638,11 +5638,11 @@ a.thumbnail.active {
 }
 
 .alert > p + p {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .alert-dismissable {
-  padding-right: 35px;
+  padding-right: 50px;
 }
 
 .alert-dismissable .close {

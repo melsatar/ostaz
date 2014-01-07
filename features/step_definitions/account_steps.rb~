@@ -1,5 +1,6 @@
 require 'simplecov'
 SimpleCov.start
+
 Given(/^the following roles$/) do |table|
      Role.create(table.hashes)
 end

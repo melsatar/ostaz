@@ -23,7 +23,7 @@ class OthersController < ApplicationController
        user.update( role: Role.find_by_id(@assigned_role))
        flash.now[:notice] = 'The user has been authorized!'
    else
-	flash.now[:notice] = 'Error occured, make sure that you select the user and role'
+	flash.now[:error] = 'Error occured, make sure that you select the user and role'
    end
 
 

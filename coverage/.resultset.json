@@ -392,6 +392,10 @@
         1,
         null
       ],
+      "/home/melsatar/Documents/Ostaz/app/helpers/others_helper.rb": [
+        1,
+        null
+      ],
       "/home/melsatar/Documents/Ostaz/app/helpers/transactions_helper.rb": [
         1,
         null
@@ -618,16 +622,6 @@
       "/home/melsatar/Documents/Ostaz/app/models/transaction.rb": [
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
         1,
         1,
@@ -704,6 +698,6 @@
         null
       ]
     },
-    "timestamp": 1389115897
+    "timestamp": 1389123966
   }
 }
