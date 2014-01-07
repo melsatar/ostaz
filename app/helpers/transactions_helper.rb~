@@ -1,5 +1,0 @@
-module TransactionsHelper
-def transactions_search_path
-    { :controller => 'transactions', :action => 'search'}
-end
-end
