@@ -21,5 +21,5 @@ Scenario: adding an account without assigning role
 	Given I am a new, authenticated user
         Given I am on the homepage
         And I follow "New Account"
-	Then I should be on the new account page
-	Then I should see "access_denied: requires an role"
+	Then I should be on the homepage
+	Then I should see "This user does not have the privilege to access this page"
