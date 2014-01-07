@@ -1,4 +1,4 @@
-<%= form_for(@account) do |f| %>
+<%= form_for @account, :html => { :class => 'form-horizontal' } do |f| %>
   <% if @account.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
@@ -12,18 +12,20 @@
   <% end %>
 <%#= Account.all %>
   <div class="field">
-    <%= f.label "Account Name" %><br>
-    <%= f.text_field :a_name %>
+    <%= f.label "Account Name", :class => 'control-label' %><br>
+    <%= f.text_field :a_name, :class => 'text_field' %>
   </div>
   <div class="field">
-    <%= f.label "Account Type" %><br>
-    <%= f.select :a_type, ['Expense','Liability','Asset','Equity'] %>
+    <%= f.label "Account Type", :class => 'control-label' %><br>
+    <%= f.select :a_type, ['Expense','Liability','Asset','Equity'], :class => 'dropdown-toggle' %>
   </div>
   <div class="field">
-    <%= f.label "Amount" %><br>
-    <%= f.text_field :a_amount %>
+    <%= f.label "Amount", :class => 'control-label' %><br>
+    <%= f.text_field :a_amount, :class => 'text_field' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                accounts_path, :class => 'btn' %>
   </div>
 <% end %>

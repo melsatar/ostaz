@@ -1,18 +1,23 @@
 <h1>Accounts Balance</h1>
+
+<label class='control-label'>
+   Welcome < <%=current_user.email%> >
+</label>
+<p>
+</P>
 <%=form_tag accounts_path, :method => 'get' do %>
   <p>Account Name
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :a_name => nil %>
+    <%= submit_tag "Search", :a_name => nil, :class => 'btn btn-primary' %>
   </p>
 <% end %>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th><%=link_to 'Account Name', sort: :name %></th>
       <th><%=link_to 'Account Type', sort: :type %></th>
       <th><%=link_to 'Account Amount', sort: :amount %></th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -26,7 +31,6 @@
         <td><%= account.a_amount %></td>
         <td><%= link_to 'Show', account %></td>
         <td><%= link_to 'Edit', edit_account_path(account) %></td>
-        <td><%#= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -76,11 +80,8 @@
     <div id="chart_div"></div>
 
 <p>
-<%= link_to 'New Account', new_account_path %>
+<%= link_to 'New Account', new_account_path, :class => 'btn-link'%>
 </p>
 <p>
-<%= link_to 'New Transaction', new_transaction_path %>
-</p>
-<p>
-<%= link_to 'List all Transaction', transactions_path %>
+<%= link_to 'New Transaction', new_transaction_path, :class => 'btn-link' %>
 </p>

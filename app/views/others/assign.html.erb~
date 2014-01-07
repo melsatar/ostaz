@@ -1,25 +1,22 @@
-<h1>User assignment</h1>
+<h1>User Management</h1>
 <%=form_tag others_assign_path, :method => 'get' do %>
   <p>
     User
-    <%= select_tag :user, options_from_collection_for_select(@users,:id,:email), :include_blank => true %>
+    <%= select_tag :user, options_from_collection_for_select(@users,:id,:email), :include_blank => true, :class => 'dropdown-toggle' %>
     Role
-    <%= select_tag :role, options_from_collection_for_select(@roles,:id,:name), :include_blank => true %>
+    <%= select_tag :role, options_from_collection_for_select(@roles,:id,:name), :include_blank => true, :class => 'dropdown-toggle' %>
     <p>
-    <%= submit_tag "Assign", :name => nil %>
+    <%= submit_tag "Assign", :name => nil, :class => 'btn btn-primary' %>
     </p>
   </p>
 <% end %>
 
-<% if flash[:notice] %>
-   <div class="notice"><%= flash[:notice] %></div>
-<% end %>
 <p>
 </p>
 <p>
 </p>
 
-<table>
+<table class="table table-responsive">
   <thead>
     <tr>
       <th>User Email</th>

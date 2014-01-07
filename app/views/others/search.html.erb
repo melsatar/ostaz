@@ -9,16 +9,11 @@
     <%= select_tag :f_account, options_from_collection_for_select(@accounts,:id,:a_name), :include_blank => true %>
     To Account
     <%= select_tag :t_account, options_from_collection_for_select(@accounts,:id,:a_name), :include_blank => true %>
-    <p>
-    <%= submit_tag "Search", :name => nil %>
-    </p>
+    <%= submit_tag "Search", :name => nil, :class => 'btn btn-primary' %>
   </p>
 <% end %>
 
-<p>
-<%= link_to 'Home Page', accounts_path %>
-</p>
-<table>
+<table class="table table-responsive">
   <thead>
     <tr>
       <th>From Account</th>

@@ -1,8 +1,4 @@
 <h1>Transactions List</h1>
-
-<p>
-<%= link_to 'Home Page', accounts_path %>
-</p>
 <table>
   <thead>
     <tr>
