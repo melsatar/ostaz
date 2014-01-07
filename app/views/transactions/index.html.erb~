@@ -43,7 +43,7 @@
 
 <%= link_to 'New Transaction', new_transaction_path %>
 <p>
-<%= link_to 'Search Transactions', search_path %>
+<%= link_to 'Search Transactions', others_search_path, method: :get %>
 </p>
 
 <html>
@@ -64,7 +64,7 @@
 
         var options = {
           title: 'Amount of transactions per day',
-          vAxis: {title: 'Day',  titleTextStyle: {color: 'red'},is3D: true}
+          vAxis: {title: 'Day',  titleTextStyle: {color: 'red'}}
         };
 
         var chart = new google.visualization.BarChart(document.getElementById('chart_div'));

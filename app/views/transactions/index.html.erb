@@ -1,8 +1,4 @@
 <h1>Transactions List</h1>
-
-<p>
-<%= link_to 'Home Page', accounts_path %>
-</p>
 <table>
   <thead>
     <tr>
@@ -43,7 +39,7 @@
 
 <%= link_to 'New Transaction', new_transaction_path %>
 <p>
-<%= link_to 'Search Transactions', search_path %>
+<%= link_to 'Search Transactions', others_search_path, method: :get %>
 </p>
 
 <html>

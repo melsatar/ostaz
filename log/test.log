@@ -11038,3 +11038,631 @@ Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.5ms)
   [1m[35m (0.2ms)[0m  rollback transaction
   [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles"[0m
   [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (33.6ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:29:42 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:42 UTC +00:00]]
+  [1m[36m (227.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:29:42 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:42 UTC +00:00]]
+  [1m[35m (169.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:29:42 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:42 UTC +00:00]]
+  [1m[36m (172.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:29:42 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:42 UTC +00:00]]
+  [1m[35m (252.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Tue, 07 Jan 2014 17:29:43 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:43 UTC +00:00]]
+  [1m[36m (301.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Dept"], ["a_type", "Liability"], ["created_at", Tue, 07 Jan 2014 17:29:43 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:43 UTC +00:00]]
+  [1m[35m (178.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Tue, 07 Jan 2014 17:29:43 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:43 UTC +00:00]]
+  [1m[36m (162.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Tue, 07 Jan 2014 17:29:43 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:43 UTC +00:00]]
+  [1m[35m (179.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Tue, 07 Jan 2014 17:29:43 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:43 UTC +00:00]]
+  [1m[36m (244.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Tue, 07 Jan 2014 17:29:44 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:44 UTC +00:00]]
+  [1m[35m (181.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.1ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'admin' LIMIT 1
+  [1m[36mRole Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'admin' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Jan 2014 17:29:44 UTC +00:00], ["description", "Manage Every thing"], ["name", "admin"], ["the_role", "{\"system\":{\"administrator\":true}}"], ["title", "admin"], ["updated_at", Tue, 07 Jan 2014 17:29:44 UTC +00:00]]
+  [1m[36m (386.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mRole Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'Accountant' LIMIT 1[0m
+  [1m[35mRole Exists (0.2ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Accountant' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 07 Jan 2014 17:29:44 UTC +00:00], ["description", "Accountant authorization"], ["name", "accountant"], ["the_role", "{\"accounts\":{\"index\":true,\"edit\":true,\"show\":true,\"new\":true,\"create\":true}}"], ["title", "Accountant"], ["updated_at", Tue, 07 Jan 2014 17:29:44 UTC +00:00]]
+  [1m[35m (305.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.1ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'Data_Entry' LIMIT 1
+  [1m[36mRole Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Data_Entry' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Jan 2014 17:29:45 UTC +00:00], ["description", "Data Entry authorization"], ["name", "data_entry"], ["the_role", "{\"accounts\":{\"index\":true,\"edit\":false,\"show\":true,\"new\":false,\"create\":false},\"transactions\":{\"index\":true,\"edit\":false,\"show\":true,\"new\":false,\"create\":false}}"], ["title", "Data_Entry"], ["updated_at", Tue, 07 Jan 2014 17:29:45 UTC +00:00]]
+  [1m[36m (198.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@ostaz.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 07 Jan 2014 17:29:45 UTC +00:00], ["email", "admin@ostaz.com"], ["encrypted_password", "$2a$04$IYWtPAqwxVuGjqXN2HzJnuKExcnQzL404wjz282llHEzsZ.aNgOjy"], ["updated_at", Tue, 07 Jan 2014 17:29:45 UTC +00:00]]
+  [1m[36m (228.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."name" = 'admin' ORDER BY "roles"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "role_id" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["role_id", 1], ["updated_at", Tue, 07 Jan 2014 17:29:45 UTC +00:00]]
+  [1m[35m (174.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'accountant@ostaz.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 07 Jan 2014 17:29:46 UTC +00:00], ["email", "accountant@ostaz.com"], ["encrypted_password", "$2a$04$.ReZEG.dcvTmVS1jzaelk.Jl4/iTSZ030MyKDoSz4/W83.nghoj9e"], ["updated_at", Tue, 07 Jan 2014 17:29:46 UTC +00:00]]
+  [1m[35m (202.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'accountant@ostaz.com' LIMIT 1[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'Accountant' ORDER BY "roles"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'entry@ostaz.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 07 Jan 2014 17:29:46 UTC +00:00], ["email", "entry@ostaz.com"], ["encrypted_password", "$2a$04$lrvGyXfpS2qG7oh/aKbiT.XIarHSX8/y7TzJSmGcriK7lRbuk6TsC"], ["updated_at", Tue, 07 Jan 2014 17:29:46 UTC +00:00]]
+  [1m[35m (153.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'entry@ostaz.com' LIMIT 1[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'Data_Entry' ORDER BY "roles"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:29:47 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (117.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 231ms (Views: 164.3ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:29:47 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"admin@ostaz.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin@ostaz.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Tue, 07 Jan 2014 17:29:47 UTC +00:00], ["current_sign_in_at", Tue, 07 Jan 2014 17:29:47 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 07 Jan 2014 17:29:47 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 88ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2014-01-07 19:29:47 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+Started GET "/accounts" for 127.0.0.1 at 2014-01-07 19:29:47 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2014-01-07 19:29:47 +0200
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered accounts/_form.html.erb (12.4ms)
+  Rendered accounts/new.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+Started POST "/accounts" for 127.0.0.1 at 2014-01-07 19:29:47 +0200
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"a_name"=>"Test Account", "a_type"=>"Asset", "a_amount"=>"1000"}, "commit"=>"Create Account"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 1000.0], ["a_name", "Test Account"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:29:47 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:47 UTC +00:00]]
+Redirected to http://www.example.com/accounts/11
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+Started GET "/accounts/11" for 127.0.0.1 at 2014-01-07 19:29:47 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'testing@man.net' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["email", "testing@man.net"], ["encrypted_password", "$2a$04$qjFAexUuSTKFcRY75sAWsOD2917N0rsC1fiSxx3gebjUkwz67/J4i"], ["updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00]]
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'testing@man.net' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 4[0m  [["last_sign_in_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["current_sign_in_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+Started GET "/accounts" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered text template (0.0ms)
+Filter chain halted as :role_required rendered or redirected
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"admin@ostaz.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@ostaz.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["current_sign_in_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+Started GET "/accounts" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.2ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered transactions/_form.html.erb (61.6ms)
+  Rendered transactions/new.html.erb within layouts/application (62.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 75ms (Views: 65.2ms | ActiveRecord: 0.8ms)
+Started POST "/transactions" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"1000", "t_date(1i)"=>"2014", "t_date(2i)"=>"1", "t_date(3i)"=>"7", "t_desc"=>"test", "t_attac"=>#<ActionDispatch::Http::UploadedFile:0x00000006b74bb0 @tempfile=#<File:/tmp/RackMultipart20140107-15406-5lxz5j>, @original_filename="an_image.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"transaction[t_attac]\"; filename=\"an_image.png\"\r\nContent-Type: image/png\r\nContent-Length: 14424\r\n">}, "commit"=>"Create Transaction"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/an_image20140107-15406-1biwij6.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/an_image20140107-15406-1biwij6.png[0]'
+Command :: identify -format %m '/tmp/an_image20140107-15406-1biwij6.png[0]'
+Command :: identify -format %m '/tmp/an_image20140107-15406-1biwij6.png[0]'
+Command :: convert '/tmp/an_image20140107-15406-1biwij6.png[0]' -auto-orient -resize "300x300>" '/tmp/an_image20140107-15406-1biwij620140107-15406-1cong66'
+Command :: file -b --mime '/tmp/an_image20140107-15406-1biwij620140107-15406-1cong66'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/an_image20140107-15406-1biwij6.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/an_image20140107-15406-1biwij6.png[0]'
+Command :: identify -format %m '/tmp/an_image20140107-15406-1biwij6.png[0]'
+Command :: identify -format %m '/tmp/an_image20140107-15406-1biwij6.png[0]'
+Command :: convert '/tmp/an_image20140107-15406-1biwij6.png[0]' -auto-orient -resize "100x100>" '/tmp/an_image20140107-15406-1biwij620140107-15406-1ngp7az'
+Command :: file -b --mime '/tmp/an_image20140107-15406-1biwij620140107-15406-1ngp7az'
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')[0m
+Binary data inserted for `string` type on column `t_attac_content_type`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_attac_content_type", "t_attac_file_name", "t_attac_file_size", "t_attac_updated_at", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["from_account_id", 1], ["t_amount", 1000.0], ["t_attac_content_type", "image/png"], ["t_attac_file_name", "an_image.png"], ["t_attac_file_size", 14424], ["t_attac_updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["t_date", Tue, 07 Jan 2014], ["t_desc", "test"], ["to_account_id", 2], ["updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00]]
+Redirected to http://www.example.com/transactions/1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1  [["a_amount", 49000.0], ["updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2  [["a_amount", 1000.0], ["updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00]]
+Completed 302 Found in 435ms (ActiveRecord: 2.4ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2[0m
+  Rendered transactions/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'testing@man.net' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["email", "testing@man.net"], ["encrypted_password", "$2a$04$WVjtqNM38bpY1HFOpUBgMuU04762fr0aaT.WvWDTDjvMeIf0Dyaxy"], ["updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00]]
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'testing@man.net' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 4[0m  [["last_sign_in_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["current_sign_in_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+Started GET "/accounts" for 127.0.0.1 at 2014-01-07 19:29:48 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 5.8ms | ActiveRecord: 0.5ms)
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:48 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Debt"], ["a_type", "Liability"], ["created_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:29:49 UTC +00:00]]
+Started GET "/transactions/new" for 127.0.0.1 at 2014-01-07 19:29:49 +0200
+Processing by TransactionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered text template (0.0ms)
+Filter chain halted as :role_required rendered or redirected
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (32.9ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Bank"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:31:27 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:27 UTC +00:00]]
+  [1m[36m (2877.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Cash"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:31:30 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:30 UTC +00:00]]
+  [1m[35m (549.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Equipment"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:31:31 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:31 UTC +00:00]]
+  [1m[36m (235.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Accounts Receivable"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:31:31 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:31 UTC +00:00]]
+  [1m[35m (236.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Accounts Payable"], ["a_type", "Liability"], ["created_at", Tue, 07 Jan 2014 17:31:31 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:31 UTC +00:00]]
+  [1m[36m (299.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Dept"], ["a_type", "Liability"], ["created_at", Tue, 07 Jan 2014 17:31:32 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:32 UTC +00:00]]
+  [1m[35m (240.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 0.0], ["a_name", "Office Expenses"], ["a_type", "Expense"], ["created_at", Tue, 07 Jan 2014 17:31:32 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:32 UTC +00:00]]
+  [1m[36m (240.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Project Expenses"], ["a_type", "Expense"], ["created_at", Tue, 07 Jan 2014 17:31:32 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:32 UTC +00:00]]
+  [1m[35m (459.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 50000.0], ["a_name", "Capital"], ["a_type", "Equity"], ["created_at", Tue, 07 Jan 2014 17:31:33 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:33 UTC +00:00]]
+  [1m[36m (624.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["a_amount", 0.0], ["a_name", "Revenue"], ["a_type", "Equity"], ["created_at", Tue, 07 Jan 2014 17:31:33 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:33 UTC +00:00]]
+  [1m[35m (175.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.2ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'admin' LIMIT 1
+  [1m[36mRole Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'admin' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Jan 2014 17:31:34 UTC +00:00], ["description", "Manage Every thing"], ["name", "admin"], ["the_role", "{\"system\":{\"administrator\":true}}"], ["title", "admin"], ["updated_at", Tue, 07 Jan 2014 17:31:34 UTC +00:00]]
+  [1m[36m (231.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mRole Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'Accountant' LIMIT 1[0m
+  [1m[35mRole Exists (0.2ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Accountant' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 07 Jan 2014 17:31:34 UTC +00:00], ["description", "Accountant authorization"], ["name", "accountant"], ["the_role", "{\"accounts\":{\"index\":true,\"edit\":true,\"show\":true,\"new\":true,\"create\":true}}"], ["title", "Accountant"], ["updated_at", Tue, 07 Jan 2014 17:31:34 UTC +00:00]]
+  [1m[35m (178.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Exists (0.3ms)[0m  SELECT 1 AS one FROM "roles" WHERE "roles"."name" = 'Data_Entry' LIMIT 1
+  [1m[36mRole Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "roles" WHERE "roles"."title" = 'Data_Entry' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "roles" ("created_at", "description", "name", "the_role", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Jan 2014 17:31:34 UTC +00:00], ["description", "Data Entry authorization"], ["name", "data_entry"], ["the_role", "{\"accounts\":{\"index\":true,\"edit\":false,\"show\":true,\"new\":false,\"create\":false},\"transactions\":{\"index\":true,\"edit\":false,\"show\":true,\"new\":false,\"create\":false}}"], ["title", "Data_Entry"], ["updated_at", Tue, 07 Jan 2014 17:31:34 UTC +00:00]]
+  [1m[36m (176.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@ostaz.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 07 Jan 2014 17:31:34 UTC +00:00], ["email", "admin@ostaz.com"], ["encrypted_password", "$2a$04$CZZpIxgh9CcSB.d0eFOEY.Nb0L5AvujC5onYpAgf82ECuArABy7Ta"], ["updated_at", Tue, 07 Jan 2014 17:31:34 UTC +00:00]]
+  [1m[36m (183.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.6ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."name" = 'admin' ORDER BY "roles"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "role_id" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["role_id", 1], ["updated_at", Tue, 07 Jan 2014 17:31:35 UTC +00:00]]
+  [1m[35m (200.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.4ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'accountant@ostaz.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 07 Jan 2014 17:31:35 UTC +00:00], ["email", "accountant@ostaz.com"], ["encrypted_password", "$2a$04$G0a5G1wzTGQEnVaHG8Gbn.Gwdst/V065tjysZRFceltwDtH6uzgAe"], ["updated_at", Tue, 07 Jan 2014 17:31:35 UTC +00:00]]
+  [1m[35m (154.9ms)[0m  commit transaction
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'accountant@ostaz.com' LIMIT 1[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'Accountant' ORDER BY "roles"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.4ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'entry@ostaz.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 07 Jan 2014 17:31:35 UTC +00:00], ["email", "entry@ostaz.com"], ["encrypted_password", "$2a$04$FFXmhRhZVm0kdMwcdmvbBeLn7rs3al3XSZMLcj5EET/uft8ke.csq"], ["updated_at", Tue, 07 Jan 2014 17:31:35 UTC +00:00]]
+  [1m[35m (172.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'entry@ostaz.com' LIMIT 1[0m
+  [1m[35mRole Load (0.3ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'Data_Entry' ORDER BY "roles"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:31:36 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (117.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.2ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 221ms (Views: 164.8ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:31:36 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"admin@ostaz.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin@ostaz.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Tue, 07 Jan 2014 17:31:36 UTC +00:00], ["current_sign_in_at", Tue, 07 Jan 2014 17:31:36 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 07 Jan 2014 17:31:36 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 81ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+Started GET "/accounts" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered accounts/_form.html.erb (5.0ms)
+  Rendered accounts/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 7.8ms | ActiveRecord: 0.4ms)
+Started POST "/accounts" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"a_name"=>"Test Account", "a_type"=>"Asset", "a_amount"=>"1000"}, "commit"=>"Create Account"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "accounts" ("a_amount", "a_name", "a_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["a_amount", 1000.0], ["a_name", "Test Account"], ["a_type", "Asset"], ["created_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00], ["updated_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00]]
+Redirected to http://www.example.com/accounts/11
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/accounts/11" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."name" = 'user' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'testing@man.net' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00], ["email", "testing@man.net"], ["encrypted_password", "$2a$04$ZJagBPdv6ESsP3YGhyGX.eBDTeVsvzrmwcBggkQU1JEG7bb9ZH4i6"], ["updated_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00]]
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"testing@man.net", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'testing@man.net' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 4[0m  [["last_sign_in_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00], ["current_sign_in_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+Started GET "/accounts" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by AccountsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  Rendered accounts/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+Started GET "/accounts/new" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by AccountsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered text template (0.0ms)
+Filter chain halted as :role_required rendered or redirected
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"admin@ostaz.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@ostaz.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00], ["current_sign_in_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+Started GET "/accounts" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered accounts/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+Started GET "/transactions/new" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by TransactionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "accounts".* FROM "accounts"
+  Rendered transactions/_form.html.erb (62.0ms)
+  Rendered transactions/new.html.erb within layouts/application (62.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 65.4ms | ActiveRecord: 0.7ms)
+Started POST "/transactions" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "transaction"=>{"from_account_id"=>"1", "to_account_id"=>"2", "t_amount"=>"1000", "t_date(1i)"=>"2014", "t_date(2i)"=>"1", "t_date(3i)"=>"7", "t_desc"=>"test", "t_attac"=>#<ActionDispatch::Http::UploadedFile:0x00000006936b28 @tempfile=#<File:/tmp/RackMultipart20140107-15574-6i5zh7>, @original_filename="an_image.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"transaction[t_attac]\"; filename=\"an_image.png\"\r\nContent-Type: image/png\r\nContent-Length: 14424\r\n">}, "commit"=>"Create Transaction"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1  [["id", 1]]
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/an_image20140107-15574-ql0qu2.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/an_image20140107-15574-ql0qu2.png[0]'
+Command :: identify -format %m '/tmp/an_image20140107-15574-ql0qu2.png[0]'
+Command :: identify -format %m '/tmp/an_image20140107-15574-ql0qu2.png[0]'
+Command :: convert '/tmp/an_image20140107-15574-ql0qu2.png[0]' -auto-orient -resize "300x300>" '/tmp/an_image20140107-15574-ql0qu220140107-15574-1y35t7v'
+Command :: file -b --mime '/tmp/an_image20140107-15574-ql0qu220140107-15574-1y35t7v'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/an_image20140107-15574-ql0qu2.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/an_image20140107-15574-ql0qu2.png[0]'
+Command :: identify -format %m '/tmp/an_image20140107-15574-ql0qu2.png[0]'
+Command :: identify -format %m '/tmp/an_image20140107-15574-ql0qu2.png[0]'
+Command :: convert '/tmp/an_image20140107-15574-ql0qu2.png[0]' -auto-orient -resize "100x100>" '/tmp/an_image20140107-15574-ql0qu220140107-15574-bm6ns8'
+Command :: file -b --mime '/tmp/an_image20140107-15574-ql0qu220140107-15574-bm6ns8'
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Asset')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_amount FROM "accounts" WHERE (a_type = 'Liability')[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT a_amount FROM "accounts" WHERE (a_type = 'Expense')
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT a_name, a_amount FROM "accounts" WHERE (a_type = 'Equity')[0m
+Binary data inserted for `string` type on column `t_attac_content_type`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "transactions" ("created_at", "from_account_id", "t_amount", "t_attac_content_type", "t_attac_file_name", "t_attac_file_size", "t_attac_updated_at", "t_date", "t_desc", "to_account_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00], ["from_account_id", 1], ["t_amount", 1000.0], ["t_attac_content_type", "image/png"], ["t_attac_file_name", "an_image.png"], ["t_attac_file_size", 14424], ["t_attac_updated_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00], ["t_date", Tue, 07 Jan 2014], ["t_desc", "test"], ["to_account_id", 2], ["updated_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00]]
+Redirected to http://www.example.com/transactions/1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 1  [["a_amount", 49000.0], ["updated_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00]]
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "accounts" SET "a_amount" = ?, "updated_at" = ? WHERE "accounts"."id" = 2  [["a_amount", 1000.0], ["updated_at", Tue, 07 Jan 2014 17:31:37 UTC +00:00]]
+Completed 302 Found in 359ms (ActiveRecord: 2.5ms)
+Started GET "/transactions/1" for 127.0.0.1 at 2014-01-07 19:31:37 +0200
+Processing by TransactionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTransaction Load (0.1ms)[0m  [1mSELECT "transactions".* FROM "transactions" WHERE "transactions"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.1ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = ? ORDER BY "roles"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 2[0m
+  Rendered transactions/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
