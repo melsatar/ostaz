@@ -12,6 +12,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails'  
+  gem 'rails_layout'
 end
 
 group :test do
@@ -29,7 +30,8 @@ group :production do
 end
 
 gem 'the_role'
-gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
+#gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
+gem 'bootstrap-sass'
 gem 'simplecov', :require => false, :group => :test
 gem 'devise'
 gem 'cancan'

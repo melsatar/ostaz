@@ -1,5 +1,7 @@
 class PagesController < ActionController::Base
-  
+  before_filter :authenticate_user!
+  #before_filter :role_required
+
   def search
     @accounts = Account.all
     @amount = params[:amount]

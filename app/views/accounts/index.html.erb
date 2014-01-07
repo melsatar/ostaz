@@ -1,10 +1,4 @@
 <h1>Accounts Balance</h1>
-<p>
-<% if current_user.has_role? :system, :administrator %>
-  <%= link_to 'Admin Page', admin_roles_path  %>
-  <%= link_to 'Assign User Role', assign_path  %>
-<% end %>
-</p>
 <%=form_tag accounts_path, :method => 'get' do %>
 
   <p>Account Name
@@ -90,7 +84,4 @@
 </p>
 <p>
 <%= link_to 'List all Transaction', transactions_path %>
-</p>
-<p>
-<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
 </p>
