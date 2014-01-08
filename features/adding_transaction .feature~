@@ -13,7 +13,7 @@ Scenario: adding a transaction
         Then I select "Cash" from "transaction_to_account_id"
         And I fill in "transaction_t_amount" with "1000"
         And I fill in "transaction_t_desc" with "test"
-        When I attach the file "/home/melsatar/Documents/Project/public/images/an_image.png" to "transaction_t_attac"
+        When I attach the file "../public/images/an_image.png" to "transaction_t_attac"
         When I press "Create Transaction"
         Then I should see "Transaction was successfully created."
 
