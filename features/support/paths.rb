@@ -14,7 +14,11 @@ module NavigationHelpers
     case page_name
 
     when /^the ?home\s?page$/ then '/accounts'
+    when /^the register page$/ then '/users/sign_up'
+    when /^the user setting page$/ then '/users/edit'
     when /^the transactions page$/ then '/transactions'
+    when /^the Role Creation page$/ then '/admin/roles'
+    when /^the Role Management page$/ then '/others/assign'
     when /^the new transactions page$/ then '/transactions/new'
     when /^the show transactions page$/ then '/transactions/show'
     when /^the new account page$/ then '/accounts/new'
