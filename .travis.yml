@@ -1,12 +1,12 @@
 language: ruby
 rvm:
   - "1.9.3"
-  - jruby-19mode # JRuby in 1.9 mode
-  - rbx
 notifications:
   recipients:
     - melsatar@gmail.com
-branches:
-  only:
-    - develop
-script: bundle exec cucumber
+
+script: 
+ -bundle exec rake db:migrate
+ -bundle exec rake db:test:prepare
+ -bundle exec cucumber
+
