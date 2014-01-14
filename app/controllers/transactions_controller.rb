@@ -44,28 +44,38 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
    
  
-      respond_to do |format|
-      if @transaction.save
-        format.html { redirect_to @transaction, notice: 'Transaction was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @transaction }
-     else
-	format.html { render action: 'new' }
-        format.json { render json: @transaction.errors, status: :unprocessable_entity }
-     end
-     end
-
-   if transaction_params[:t_amount].to_f > 0
-	   account_from = Account.find_by_id(transaction_params[:from_account_id])
-   	   account_from.a_amount = account_from.a_amount - transaction_params[:t_amount].to_f
-	   if account_from.a_amount >= 0
-        	account_from.save
-        	account_to = Account.find_by_id(transaction_params[:to_account_id])
-        	account_to.a_amount = account_to.a_amount + transaction_params[:t_amount].to_f
-        	account_to.save
-   	   end
-   end
+    respond_to do |format|
+		if @transaction.save
+			format.html { redirect_to @transaction, notice: 'Transaction was successfully created.' }
+			format.json { render action: 'show', status: :created, location: @transaction }
+		else
+			format.html { render action: 'new' }
+			format.json { render json: @transaction.errors, status: :unprocessable_entity }
+		end
+	end
+     
+	if transaction_params[:t_amount].to_f > 0
+	    from_account = Account.find_by_id(transaction_params[:from_account_id])
+		to_account = Account.find_by_id(transaction_params[:to_account_id])
+   	    #account_from.a_amount = account_from.a_amount - transaction_params[:t_amount].to_f
+	    from_account_type = Account.find_by_id(transaction_params[:from_account_id]).a_type
+	    
+		if from_account_type == "Liability"
+			from_account.a_amount += transaction_params[:t_amount].to_f
+			to_account.a_amount += transaction_params[:t_amount].to_f
+		else
+			if from_account.a_amount >= 0
+				from_account.a_amount -= transaction_params[:t_amount].to_f
+				to_account.a_amount += transaction_params[:t_amount].to_f
+				
+			end
+		end
+		
+		from_account.save
+		to_account.save
    
- end
+	end
+  end
 
     
   # PATCH/PUT /transactions/1
@@ -83,9 +93,14 @@ class TransactionsController < ApplicationController
     end
 
     if transaction_params[:t_amount].to_f > 0
-	   current_transaction = Transaction.find_by_id(transaction_params[:id])
+	   #current_transaction = Transaction.find_by_id(transaction_params[:id])
+	   #p current_transaction.to_s + "IIIIIIIIIIIIIIIIIIIIIIIIIII"
+	   #p self.find_by_id (transaction_params[:id]).t_amount
 	   account_from = Account.find_by_id(transaction_params[:from_account_id])
+	   #p @transaction.t_amount.to_s + "IIIIIIIIIIIIIIIIIII"
+	   #p transaction_params[:t_amount].to_s 
    	   account_from.a_amount = account_from.a_amount + @transaction.t_amount - transaction_params[:t_amount].to_f
+	   #p account_from.a_amount
 	   if account_from.a_amount >= 0
         	account_from.save
         	account_to = Account.find_by_id(transaction_params[:to_account_id])
